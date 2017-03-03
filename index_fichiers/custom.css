@@ -80,78 +80,78 @@ dt{
 }
 
 .parrot-ontology-ref {
-	background-image: url("icon-ontology-16.png");
+	background-image: url("../images/icon-ontology-16.png");
 }
 
 .parrot-ontology-title {
-	background-image: url("icon-ontology-24.png");
+	background-image: url("../images/icon-ontology-24.png");
 }
 
 .parrot-class-ref {
-	background-image: url("icon-class-16.png");
+	background-image: url("../images/icon-class-16.png");
 }
 
 .parrot-class-title {
-	background-image: url("icon-class-24.png");
+	background-image: url("../images/icon-class-24.png");
 }
 
 .parrot-property-ref {
-	background-image: url("icon-property-16.png");
+	background-image: url("../images/icon-property-16.png");
 }
 
 .parrot-property-title {
-	background-image: url("icon-property-24.png");
+	background-image: url("../images/icon-property-24.png");
 }
 
 .parrot-individual-ref {
-	background-image: url("icon-individual-16.png");
+	background-image: url("../images/icon-individual-16.png");
 }
 
 .parrot-individual-title {
-	background-image: url("icon-individual-24.png");
+	background-image: url("../images/icon-individual-24.png");
 }
 
 .parrot-rule-ref {
-	background-image: url("icon-rule-16.png");
+	background-image: url("../images/icon-rule-16.png");
 }
 
 .parrot-rule-title {
-	background-image: url("icon-rule-24.png");
+	background-image: url("../images/icon-rule-24.png");
 }
 
 .parrot-ruleset-ref {
-	background-image: url("icon-ruleset-16.png");
+	background-image: url("../images/icon-ruleset-16.png");
 }
 
 .parrot-ruleset-title {
-	background-image: url("icon-ruleset-24.png");
+	background-image: url("../images/icon-ruleset-24.png");
 }
 
 .parrot-datatype-ref {
-	background-image: url("icon-datatype-16.png");
+	background-image: url("../images/icon-datatype-16.png");
 }
 
 .parrot-catalog-title {
-	background-image: url("icon-catalog-24.png");
+	background-image: url("../images/icon-catalog-24.png");
 }
 .parrot-catalog-ref {
-	background-image: url("icon-catalog-16.png");
+	background-image: url("../images/icon-catalog-16.png");
 }
 
 .parrot-dataset-title {
-	background-image: url("icon-dataset-24.png");
+	background-image: url("../images/icon-dataset-24.png");
 }
 
 .parrot-dataset-ref {
-	background-image: url("icon-dataset-16.png");
+	background-image: url("../images/icon-dataset-16.png");
 }
 
 .parrot-vocabulary-title {
-	background-image: url("icon-vocabulary-24.png");
+	background-image: url("../images/icon-vocabulary-24.png");
 }
 
 .parrot-vocabulary-ref {
-	background-image: url("icon-vocabulary-16.png");
+	background-image: url("../images/icon-vocabulary-16.png");
 }
 
 .parrot-label-locale {
@@ -212,7 +212,7 @@ div#header {
   text-align: left;
   vertical-align: top;
   margin: 0.3em;
-  background-image: url(ctic-white.png);
+  background-image: url(../images/ctic-white.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   border: 1px solid white;
@@ -317,23 +317,23 @@ h1 a[href]:hover, h2 a[href]:hover { background-color: transparent; }
 }
 
 .date{
-	background-image: url("date.png");
+	background-image: url("../images/date.png");
 }
 
 .creator{
-	background-image: url("user.png");
+	background-image: url("../images/user.png");
 }
 
 .contributor{
-	background-image: url("user-gray.png");
+	background-image: url("../images/user-gray.png");
 }
 
 .publisher{
-	background-image: url("user-suit.png");
+	background-image: url("../images/user-suit.png");
 }
 
 .download{
-	background-image: url("download.png");
+	background-image: url("../images/download.png");
 }
 
 /** end metadata icons ***/
@@ -353,7 +353,7 @@ div.term h3 span.menu {
 div.term h3 span.menu span{
     padding: 0.7em;
     font-weight: bold;
-    color: #2779AA;
+    color: #2779AA;    
     cursor: pointer;
     text-align: center;
     border: 2px solid #AED0EA;
@@ -395,12 +395,12 @@ div.term p.description {
 }
 
 a.external-link:link {
-	background: url("external-link.png") no-repeat 100% 0;
+	background: url("../images/external-link.png") no-repeat 100% 0;
 	padding: 0 15px 0 0;
 }
 
 a.parrot-link:link {
-	background: url("parrot.png") no-repeat 100% 0;
+	background: url("../images/parrot.png") no-repeat 100% 0;
 	padding: 0 20px 0 0;
 }
 .imports{
