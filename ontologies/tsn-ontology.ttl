@@ -22,7 +22,7 @@
 									[ a foaf:Person; foaf:name "Marlène VILLANOVA-OLIVER"; foaf:homepage <http://lig-membres.imag.fr/villanov/> ],
 									[ a foaf:Person; foaf:name "Jérôme GENSEL"; foaf:homepage <http://lig-membres.imag.fr/gensel/> ],
 									[ a foaf:Person; foaf:name "Hy DAO"; foaf:homepage <https://unige.ch/gedt/membres/dao/> ];
-	dcterms:description "This RDF ontology allows describing any Territorial Statistical Nomenclature (i.e., partition of the territory) used as a support to the collect of statistical data. Statistical data that describe this territory in terms of population, unemployement rate, transport access, etc."@en;
+	dcterms:description "This RDF ontology allows describing any Territorial Statistical Nomenclature (i.e., partition of the territory) used as a support to the collect of statistical data that describe this territory in terms of population, unemployement rate, transport access, etc."@en;
 	dcterms:issued "2017-01-31"^^xsd:date;
 	dcterms:modified "2017-01-31"^^xsd:date;
 	dcterms:publisher <http://steamer.imag.fr>;
@@ -50,7 +50,7 @@ tsn:Version a rdfs:Class ;
 
 tsn:NomenclatureFeature a rdfs:Class ;
 	 rdfs:label "NomenclatureFeature"@en ;
-	 rdfs:comment "The class NomenclatureFeature is the Superclass of any TSNComponent that can have a spatial representation. It is a subclass of the Geosparql 'Feature' class. TerritoryVersion and Unit classes are subclasses of NomenclatureFeature."@en ;
+	 rdfs:comment "The class NomenclatureFeature is the Superclass of any TSNComponent that can have a spatial representation. It is a subclass of the geo:Feature concept in the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
    rdfs:subClassOf geo:Feature ;
    rdfs:subClassOf tsn:TSNComponent .
 
@@ -63,13 +63,13 @@ tsn:Territory a rdfs:Class ;
 
 tsn:TerritoryVersion a rdfs:Class ;
 	 rdfs:label "TerritoryVersion"@en ;
-	 rdfs:comment "A TerritoryVersion resource represents an unique state of a Territory resource. As the boundaries of a territory vary, due to annexation or cession operations, it results succesives versions of the territory. Thus, a territory may have as many versions as it underwent modifications. For instance, EU28 and EU27 are versions of the European Union territory. "@en ;
+	 rdfs:comment "A TerritoryVersion resource represents an unique state of a Territory resource. As the boundaries of a territory vary, due to annexation or cession operations, it results succesives versions of the territory. Thus, a territory may have as many versions as it underwent modifications. For instance, European Union of 27 and 28 member states are versions of the European Union territory."@en ;
 	 rdfs:subClassOf tsn:Version ;
 	 rdfs:subClassOf tsn:NomenclatureFeature .
 
 tsn:Nomenclature a rdfs:Class ;
  	 rdfs:label "Nomenclature"@en ;
-   rdfs:comment "A Territorial Statistical Nomenclature (i.e., Nomenclature resource) is an abstract representation of the subdivisions of a territory into Levels and Territorial Units. It is designed to answer administrative, electoral and especially statistical needs. As for territories, the boundaries of territorial units are subject to change, resulting in creation of new nomenclature versions."@en ;
+   rdfs:comment "A Territorial Statistical Nomenclature (i.e., Nomenclature resource) is an abstract representation of the subdivisions of a territory into Levels and Territorial Units. A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. As for territories, the boundaries of territorial units are subject to change, resulting in creation of new nomenclature versions."@en ;
    rdfs:subClassOf tsn:TSNComponent .
 
 tsn:NomenclatureVersion a rdfs:Class ;
@@ -79,12 +79,12 @@ tsn:NomenclatureVersion a rdfs:Class ;
 
 tsn:Level a rdfs:Class ;
    rdfs:label "Level"@en ;
-   rdfs:comment "A Territorial Statistical Nomenclature may define various levels of observation of the territory (i.e., Level resources). The lowest level of a nomenclature consists of the geographic units which form the finest partition of the territory."@en ;
+   rdfs:comment "A Territorial Statistical Nomenclature may define various levels of observation of the territory (e.g., region or district levels)"@en ;
    rdfs:subClassOf tsn:TSNComponent .
 
 tsn:Unit a rdfs:Class ;
    rdfs:label "Unit"@en ;
-   rdfs:comment "Each level of a Territorial Statistical Nomenclature is split into Territorial Units (Unit resources), i.e. a piece of geographic space that may contain subunits (or not if it is a member of the lowest level of the nomenclature)."@en ;
+   rdfs:comment "Each level of a Territorial Statistical Nomenclature is split into Territorial Units i.e., a piece of geographic space that may contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature)."@en ;
    owl:sameAs ramon:Unit ;
    rdfs:subClassOf tsn:NomenclatureFeature .
 

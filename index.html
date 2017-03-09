@@ -95,6 +95,7 @@ a RIF and OWL documentation service</h2>
 
 
 
+
 <hr>
 
 <p>
@@ -103,6 +104,7 @@ a RIF and OWL documentation service</h2>
 
 </div>
 
+<!-- ========================================================== -->
 <div class="toc" id="ontologies" style="border-radius: 10px;">
 									<h2>Abstract</h2>
 									<p>We present in this document the <i>TSN Ontology</i> (<a href="#anchor-981968115">Territorial
@@ -128,6 +130,9 @@ a RIF and OWL documentation service</h2>
 
 
 							</div>
+<!-- ========================================================== -->
+
+
 	<div class="toc" id="ontologies" style="border-radius: 10px;">
 	<h2>Ontologies</h2>
 	<p>
@@ -160,7 +165,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">This RDF ontology allows describing any Territorial Statistical Nomenclature (i.e., partition of the territory) used as a support to the collect of statistical data. Statistical data that describe this territory in terms of population, unemployement rate, transport access, etc.</p>
+      <p class="description">This RDF ontology allows describing any Territorial Statistical Nomenclature (i.e., partition of the territory) used as a support to the collect of statistical data that describe this territory in terms of population, unemployement rate, transport access, etc.</p>
 
   <div>
 
@@ -184,17 +189,15 @@ a RIF and OWL documentation service</h2>
 		<dd class="metadata-icon date">2017-01-31</dd>
 
 				<dt>Creators</dt>
-
-        <dd class="metadata-icon creator">
-          <a href="http://lig-membres.imag.fr/bernardc/" class="external-link">Camille BERNARD </a>
-      </dd>
 						  <dd class="metadata-icon creator">
 		  			<a href="http://lig-membres.imag.fr/villanov/" class="external-link">Marlène VILLANOVA-OLIVER </a>
 			  </dd>
 				  <dd class="metadata-icon creator">
 		  			<a href="http://lig-membres.imag.fr/gensel/" class="external-link">Jérôme GENSEL </a>
 			  </dd>
-
+				  <dd class="metadata-icon creator">
+		  			<a href="http://lig-membres.imag.fr/bernardc/" class="external-link">Camille BERNARD </a>
+			  </dd>
 				  <dd class="metadata-icon creator">
 		  			<a href="https://unige.ch/gedt/membres/dao/" class="external-link">Hy DAO </a>
 			  </dd>
@@ -285,7 +288,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A Territorial Statistical Nomenclature may define various levels of observation of the territory (i.e., Level resources). The lowest level of a nomenclature consists of the geographic units which form the finest partition of the territory.</p>
+      <p class="description">A Territorial Statistical Nomenclature may define various levels of observation of the territory (e.g., region or district levels)</p>
 
   <div>
 
@@ -369,7 +372,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A Territorial Statistical Nomenclature (i.e., Nomenclature resource) is an abstract representation of the subdivisions of a territory into Levels and Territorial Units. It is designed to answer administrative, electoral and especially statistical needs. As for territories, the boundaries of territorial units are subject to change, resulting in creation of new nomenclature versions.</p>
+      <p class="description">A Territorial Statistical Nomenclature (i.e., Nomenclature resource) is an abstract representation of the subdivisions of a territory into Levels and Territorial Units. A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. As for territories, the boundaries of territorial units are subject to change, resulting in creation of new nomenclature versions.</p>
 
   <div>
 
@@ -428,7 +431,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">The class NomenclatureFeature is the Superclass of any TSNComponent that can have a spatial representation. It is a subclass of the Geosparql 'Feature' class. TerritoryVersion and Unit classes are subclasses of NomenclatureFeature.</p>
+      <p class="description">The class NomenclatureFeature is the Superclass of any TSNComponent that can have a spatial representation. It is a subclass of the geo:Feature concept in the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)</p>
 
   <div>
 
@@ -656,7 +659,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A TerritoryVersion resource represents an unique state of a Territory resource. As the boundaries of a territory vary, due to annexation or cession operations, it results succesives versions of the territory. Thus, a territory may have as many versions as it underwent modifications. For instance, EU28 and EU27 are versions of the European Union territory. </p>
+      <p class="description">A TerritoryVersion resource represents an unique state of a Territory resource. As the boundaries of a territory vary, due to annexation or cession operations, it results succesives versions of the territory. Thus, a territory may have as many versions as it underwent modifications. For instance, European Union of 27 and 28 member states are versions of the European Union territory.</p>
 
   <div>
 
@@ -822,7 +825,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Each level of a Territorial Statistical Nomenclature is split into Territorial Units (Unit resources), i.e. a piece of geographic space that may contain subunits (or not if it is a member of the lowest level of the nomenclature).</p>
+      <p class="description">Each level of a Territorial Statistical Nomenclature is split into Territorial Units i.e., a piece of geographic space that may contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature).</p>
 
   <div>
 
@@ -2696,10 +2699,10 @@ a RIF and OWL documentation service</h2>
 	<div class="toc" id="individuals" style="border-radius: 10px;">
 	<h2>Individuals</h2>
 	<p>
-		  	<a href="#anchor481791497">individual-48701166</a>
-	, 		  	<a href="#anchor481791498">individual-48701167</a>
-	, 		  	<a href="#anchor481791499">individual-48701168</a>
-	, 		  	<a href="#anchor484747589">individual-48737880</a>
+		  	<a href="#anchor-1999067897">individual432927278</a>
+	, 		  	<a href="#anchor-1999067896">individual432927279</a>
+	, 		  	<a href="#anchor-1999067874">individual432927280</a>
+	, 		  	<a href="#anchor-1999067873">individual432927281</a>
 			</p>
 	</div>
 
@@ -2720,7 +2723,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor481791497"><span class="parrot-element-title parrot-individual-title">individual-48701166</span> (Individual)
+   <h3 id="anchor-1999067897"><span class="parrot-element-title parrot-individual-title">individual432927278</span> (Individual)
 
 
     <span class="menu">
@@ -2755,7 +2758,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor481791498"><span class="parrot-element-title parrot-individual-title">individual-48701167</span> (Individual)
+   <h3 id="anchor-1999067896"><span class="parrot-element-title parrot-individual-title">individual432927279</span> (Individual)
 
 
     <span class="menu">
@@ -2790,7 +2793,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor481791499"><span class="parrot-element-title parrot-individual-title">individual-48701168</span> (Individual)
+   <h3 id="anchor-1999067874"><span class="parrot-element-title parrot-individual-title">individual432927280</span> (Individual)
 
 
     <span class="menu">
@@ -2825,7 +2828,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor484747589"><span class="parrot-element-title parrot-individual-title">individual-48737880</span> (Individual)
+   <h3 id="anchor-1999067873"><span class="parrot-element-title parrot-individual-title">individual432927281</span> (Individual)
 
 
     <span class="menu">
@@ -2966,7 +2969,7 @@ a RIF and OWL documentation service</h2>
 </div>   </div>
 
 
-<div id="bottom-bar" style="overflow: hidden; position: fixed; bottom: 0px; margin-left: 190.5px;" class="jx-bar jx-bar-rounded-tl jx-bar-rounded-tr jx-bar-button jx-bar-button-rounded">
+<div id="bottom-bar" style="overflow: hidden; position: fixed; bottom: 0px; margin-left: 126px;" class="jx-bar jx-bar-rounded-tl jx-bar-rounded-tr jx-bar-button jx-bar-button-rounded">
         <ul>
             <li alt="Go to top"><a href="#"><img src="index_fichiers/top.png" alt="Go to top" style="vertical-align: bottom; border: 0px solid rgb(255, 255, 255);">&nbsp;Go to top</a></li>
         </ul>
@@ -3006,7 +3009,7 @@ a RIF and OWL documentation service</h2>
 
 	<!-- Feedback -->
 	<div>
-	<img id="feedback" src="index_fichiers/feedback.png" alt="feedback" style="background-color: rgb(132, 112, 255); left: 0px; top: 427.5px; position: fixed;" height="100" width="30">
+	<img id="feedback" src="index_fichiers/feedback.png" alt="feedback" style="background-color: rgb(132, 112, 255); left: 0px; top: 288px; position: fixed;" height="100" width="30">
 
 	</div>
   <!-- standalone -->
@@ -3038,7 +3041,7 @@ a RIF and OWL documentation service</h2>
   </script>
 
 
-<div id="jx-menu-con-id"></div><div id="jx-uhid-con-id" class="jx-show jx-bar-rounded-tl jx-bar-rounded-tr jx-bar-button jx-bar-button-rounded" style="overflow: hidden; position: fixed; margin-left: 1674.5px; bottom: 0px; display: none;"><ul id="jx-uhid-itm-id"><li alt="Show toolbar"><a id="jx-uhid-btn-id" class="jx-show-button"></a></li></ul></div><div id="jx-ttip-con-id" style="height: auto; margin-left: 0px; width: 100%; overflow: hidden; position: fixed; margin-bottom: 36px; bottom: 0px;"></div><div style="display: none; z-index: 1000; outline: 0px none;" class="ui-dialog ui-widget ui-widget-content ui-corner-all " tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-feedback-dialog"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-feedback-dialog">Give us some feedback</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="feedback-dialog" class="ui-dialog-content ui-widget-content">
+<div id="jx-menu-con-id"></div><div id="jx-uhid-con-id" class="jx-show jx-bar-rounded-tl jx-bar-rounded-tr jx-bar-button jx-bar-button-rounded" style="overflow: hidden; position: fixed; margin-left: 1095px; bottom: 0px; display: none;"><ul id="jx-uhid-itm-id"><li alt="Show toolbar"><a id="jx-uhid-btn-id" class="jx-show-button"></a></li></ul></div><div id="jx-ttip-con-id" style="height: auto; margin-left: 0px; width: 100%; overflow: hidden; position: fixed; margin-bottom: 36px; bottom: 0px;"></div><div style="display: none; z-index: 1000; outline: 0px none;" class="ui-dialog ui-widget ui-widget-content ui-corner-all " tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-feedback-dialog"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-feedback-dialog">Give us some feedback</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="feedback-dialog" class="ui-dialog-content ui-widget-content">
 		<p><img src="index_fichiers/bug.png" alt="bug"> <a href="https://bitbucket.org/fundacionctic/parrot/issues/">Report a bug </a></p>
 		<p><img src="index_fichiers/heart.png" alt="request"> <a href="https://bitbucket.org/fundacionctic/parrot/issues/">Request a feature</a></p>
 		<p><img src="index_fichiers/contact.png" alt="contact"> <a href="https://bitbucket.org/fundacionctic/parrot/wiki/Home#%21contact">Contact us</a></p>
