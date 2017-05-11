@@ -50,7 +50,7 @@ tsn:Version a rdfs:Class ;
 
 tsn:TSNFeature a rdfs:Class ;
 	 rdfs:label "TSNFeature"@en ;
-	 rdfs:comment "A TSNComponent may be a feature (i.e., a geographic resource). The features of the TSN-Ontology are TerritoryVersion and UnitVersion resources. The TSNFeature class is a subclass of the geo:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
+	 rdfs:comment "A TSNComponent may be a feature (i.e., a geographic resource). The features of the TSN-Ontology are TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature class is a subclass of the geo:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
    rdfs:subClassOf geo:Feature ;
    rdfs:subClassOf tsn:TSNComponent .
 
@@ -85,18 +85,20 @@ tsn:Level a rdfs:Class ;
 tsn:LevelVersion a rdfs:Class ;
 	 rdfs:label "LevelVersion"@en ;
 	 rdfs:comment "A LevelVersion resource is a unique representation of a Level, stable for a period of time. This period of time is the one of the NomenclatureVersion it belongs to (i.e., the reference period of the NomenclatureVersion)."@en ;
-	 rdfs:subClassOf tsn:Version .
+	 rdfs:subClassOf tsn:Version ;
+	 rdfs:subClassOf tsn:TSNFeature .
 
 tsn:Unit a rdfs:Class ;
   rdfs:label "Unit"@en ;
   rdfs:comment "Each level of a Territorial Statistical Nomenclature is split into Territorial Units i.e., a piece of geographic space that may contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature)."@en ;
   owl:sameAs ramon:Unit ;
-  rdfs:subClassOf tsn:TSNFeature .
+  rdfs:subClassOf tsn:TSNComponent .
 
 tsn:UnitVersion a rdfs:Class ;
 	rdfs:label "UnitVersion"@en ;
 	rdfs:comment "A UnitVersion resource is a unique representation of a Unit, stable for a period of time. This period of time is the one of the NomenclatureVersion it belongs to (i.e., the reference period of the NomenclatureVersion)."@en ;
-	rdfs:subClassOf tsn:Version .
+	rdfs:subClassOf tsn:Version ;
+	rdfs:subClassOf tsn:TSNFeature .
 
 #################################################################
 # Object properties
@@ -155,7 +157,7 @@ tsn:referencePeriod  a rdf:Property ;
 
 tsn:hasGeometry  a rdf:Property ;
    rdfs:label "hasGeometry"@en ;
-   rdfs:comment "Indicates a Geometry of a spatial resource (i.e., TSNFeature (TerritoryVersion or UnitVersion) resource)"@en ;
+   rdfs:comment "Indicates a Geometry of a spatial resource (i.e., TSNFeature (TerritoryVersion, LevelVersion or UnitVersion) resource)"@en ;
    rdfs:domain  tsn:TSNFeature ;
    rdfs:range geo:Geometry ;
    owl:sameAs geo:hasGeometry .
@@ -269,5 +271,5 @@ tsn:hasSubUnit  a rdf:Property ;
    rdfs:domain  tsn:UnitVersion  ;
    rdfs:range  tsn:UnitVersion ;
    owl:sameAs ramon:hasSubRegion .
-	 
+
 # end TSN-Ontology
