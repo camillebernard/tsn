@@ -53,16 +53,18 @@ a RIF and OWL documentation service</h2>
 	</p>
 
 
-<p><span class="parrot-element-ref parrot-class-ref">Classes (9):</span></p>
+<p><span class="parrot-element-ref parrot-class-ref">Classes (11):</span></p>
 <p>
 		<a href="#anchor338687317">Level</a>
+	, 		<a href="#anchor-1970301215">LevelVersion</a>
 	, 		<a href="#anchor1589853604">Nomenclature</a>
-	, 		<a href="#anchor-664435248">NomenclatureFeature</a>
 	, 		<a href="#anchor666380210">NomenclatureVersion</a>
 	, 		<a href="#anchor-924051221">Territory</a>
 	, 		<a href="#anchor-244949365">TerritoryVersion</a>
 	, 		<a href="#anchor2120438299">TSNComponent</a>
+	, 		<a href="#anchor749593556">TSNFeature</a>
 	, 		<a href="#anchor1258127793">Unit</a>
+	, 		<a href="#anchor-57103611">UnitVersion</a>
 	, 		<a href="#anchor-657206743">Version</a>
 	</p>
 
@@ -88,10 +90,24 @@ a RIF and OWL documentation service</h2>
 	, 		<a href="#anchor1617741095">isPredecessorOf</a>
 	, 		<a href="#anchor855877124">isSuccessorOf</a>
 	, 		<a href="#anchor758232886">isVersionOf</a>
+	, 		<a href="#anchor183624141">nomenclatureVersionSource</a>
 	, 		<a href="#anchor-938448803">referencePeriod</a>
 	, 		<a href="#anchor-26025792">versionRights</a>
-	, 		<a href="#anchor8570628">versionSource</a>
 	</p>
+
+
+<p><span class="parrot-element-ref parrot-individual-ref">Individuals (4):</span></p>
+<p>
+		<a href="#anchor666452315">individual2054931776</a>
+	, 		<a href="#anchor666452316">individual2054931777</a>
+	, 		<a href="#anchor666452317">individual2054931778</a>
+	, 		<a href="#anchor666452318">individual2054931779</a>
+	</p>
+
+
+
+
+
 
 
 
@@ -99,67 +115,41 @@ a RIF and OWL documentation service</h2>
 <hr>
 
 <p>
-<a href="#glossary">Glossary (32 entries)</a>
+<a href="#glossary">Glossary (34 entries)</a>
 </p>
 
 </div>
-
-<!-- ========================================================== -->
+<!-- =========================================== !-->
 <div class="toc" id="ontologies" style="border-radius: 10px;">
-									<h2>Abstract</h2>
-									<p>We present in this document the <i>TSN Ontology</i> (<a href="#anchor-981968115">Territorial
-										Statistical Nomenclature Ontology</a>) to describe any <i>Territorial Statistical Nomenclature</i>
-											(i.e., partitions of space into territorial units (e.g. administrative, electoral, statistical units)).
-											</p>
-                      <p>
-                        Please consult also the <i>TSN-Change Ontology</i> at <a href="http://purl.org/net/tsnchange#">http://purl.org/net/tsnchange#</a>
-                      </p>
-							</div>
-
-							<div class="toc" id="ontologies" style="border-radius: 10px;">
-									<h2>Diagram of the ontology</h2>
-
-										<p>
-											<em>TSN Components</em> <img
-										 src="index_fichiers/ontologies_protege_images/TSNComponent.png"
-											alt="TSN Component"> </img>
-										</p>
-                    <hr>
-
-										<p>
-											<em>TSN Feature</em> <img
-											src="index_fichiers/ontologies_protege_images/Feature.png"
-											alt="TSN Feature">
-										</p>
-                    <hr>
-
-                    <p>
-											<em>TSN main classes and predicates (focus on the spatial and temporal dimensions of the ontology)</em> <img
-                      style='height: 100%; width: 100%; object-fit: contain'
-										  src="index_fichiers/ontologies_protege_images/TSN_main_classes.png"
-											alt="TSN main classes and predicates (focus on the spatial and temporal dimensions of the ontology)"> </img>
-										</p>
-                    <hr>
-
-                    <p>
-											<em>TSN levels example (representation of the levels of the <a href="http://ec.europa.eu/eurostat/web/nuts/overview">NUTS</a> TSN)</em> <img
-                      style='height: 100%; width: 100%; object-fit: contain'
-										  src="index_fichiers/ontologies_protege_images/TSN_levels_example.png"
-											alt="TSN levels example (representation of the levels of the NUTS TSN)"> </img>
-										</p>
-                    <hr>
-
-                    <p>
-											<em>TSN versions example (representation of the evolution of the European Union territory and of the TSN that cover it)</em> <img
-                      style='height: 100%; width: 100%; object-fit: contain'
-										  src="index_fichiers/ontologies_protege_images/TSN_versions_example.png"
-											alt="TSN versions example (representation of the evolution of the European Union territory and of the TSN that cover it)"> </img>
-										</p>
-
-
-							</div>
-<!-- ========================================================== -->
-
+	<h2>Abstract</h2>
+	<p>
+		We present in this document the
+		<i>TSN Ontology</i>
+		(
+		<a href="#anchor-981968115">Territorial
+			Statistical Nomenclature Ontology</a>
+		) to describe any
+		<i>Territorial Statistical Nomenclature</i>
+		i.e., partitions of space into territorial units (e.g. administrative, electoral, statistical units) used as a suppport to the collect of socio-economic statistics.
+	</p>
+</div>
+<div class="toc" id="ontologies" style="border-radius: 10px;">
+	<h2>Diagrams of the ontology</h2>
+	<p>
+		<em>TSN Components</em>
+		<img src="index_fichiers/ontologies_protege_images/TSNComponent.png" alt="TSN Component">
+		</img>
+	</p>
+	<p>
+		<em>TSN Feature</em>
+		<img src="index_fichiers/ontologies_protege_images/Feature.png" alt="TSN Feature">
+	</p>
+	<p>
+		<em>TSN Mains classes</em>
+		<img src="index_fichiers/ontologies_protege_images/TSN_main_classes.png" alt="TSN Main classes" height="60%" width="60%">
+	</p>
+</div>
+<!-- =========================================== !-->
 
 	<div class="toc" id="ontologies" style="border-radius: 10px;">
 	<h2>Ontologies</h2>
@@ -193,7 +183,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">This RDF ontology allows describing any Territorial Statistical Nomenclature (i.e., partition of the territory) used as a support to the collect of statistical data that describe this territory in terms of population, unemployement rate, transport access, etc.</p>
+      <p class="description">This RDF ontology allows describing any Territorial Statistical Nomenclature (TSN) (i.e., partition of the territory) used as a support to socio-economic data (statistical data that describe territory in terms of population, unemployement rate, transport access, etc.).</p>
 
   <div>
 
@@ -276,13 +266,15 @@ a RIF and OWL documentation service</h2>
 	<h2>Classes</h2>
 	<p>
 	  	    	<a href="#anchor338687317">Level</a>
+	, 	  	    	<a href="#anchor-1970301215">LevelVersion</a>
 	, 	  	    	<a href="#anchor1589853604">Nomenclature</a>
-	, 	  	    	<a href="#anchor-664435248">NomenclatureFeature</a>
 	, 	  	    	<a href="#anchor666380210">NomenclatureVersion</a>
 	, 	  	    	<a href="#anchor-924051221">Territory</a>
 	, 	  	    	<a href="#anchor-244949365">TerritoryVersion</a>
 	, 	  	    	<a href="#anchor2120438299">TSNComponent</a>
+	, 	  	    	<a href="#anchor749593556">TSNFeature</a>
 	, 	  	    	<a href="#anchor1258127793">Unit</a>
+	, 	  	    	<a href="#anchor-57103611">UnitVersion</a>
 	, 	  	    	<a href="#anchor-657206743">Version</a>
 		  	</p>
 	</div>
@@ -311,12 +303,12 @@ a RIF and OWL documentation service</h2>
 
 
     <span class="menu">
-	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  <span class="inuse-menu" style="border-radius: 10px;">In use</span> 	      </span>
+	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>
   </h3>
 
 
 
-      <p class="description">A Territorial Statistical Nomenclature may define various levels of observation of the territory (e.g., region or district levels)</p>
+      <p class="description">The Level concept describes a level of observation of the Territory defined within the Nomenclature. Several levels of observation may be defined (e.g., region or district levels)</p>
 
   <div>
 
@@ -331,6 +323,67 @@ a RIF and OWL documentation service</h2>
 	  <td>This class is a sub class of</td>
 	  <td>
 	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNComponent">            	<a href="#TSNComponent"> TSNComponent</a>
+      </span>
+	  	  </td>
+	  </tr>
+
+
+
+		</tbody></table>
+
+  </div>
+
+
+
+  </div>
+</div>
+  </div>
+		  <div class="details classes" style="border-radius: 10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="term" id="md5-e1aea991a705d565af0825c8b6dd92cc" about="http://purl.org/net/tsn#LevelVersion">
+
+
+  <h3 id="anchor-1970301215"> <a id="LevelVersion"></a><span class="parrot-element-title parrot-class-title">LevelVersion</span>
+
+		  	<span rel="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">(RDFS Class)</span>
+
+
+
+
+    <span class="menu">
+	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  <span class="inuse-menu" style="border-radius: 10px;">In use</span> 	      </span>
+  </h3>
+
+
+
+      <p class="description">The LevelVersion concept describes a unique representation of a Level, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the LevelVersion belongs to.</p>
+
+  <div>
+
+
+    <div class="ti" style="border-radius: 10px; display: block;">
+  <h4>Definition</h4>
+			<p>The <strong>URI</strong> of this class is <span><code>http://purl.org/net/tsn#LevelVersion</code></span></p>
+		<hr>
+
+		<table>
+		  <tbody><tr>
+	  <td>This class is a sub class of</td>
+	  <td>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNFeature">            	<a href="#TSNFeature"> TSNFeature</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#Version">            	<a href="#Version"> Version</a>
       </span>
 	  	  </td>
 	  </tr>
@@ -400,7 +453,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A Territorial Statistical Nomenclature (i.e., Nomenclature resource) is an abstract representation of the subdivisions of a territory into Levels and Territorial Units. A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. As for territories, the boundaries of territorial units are subject to change, resulting in creation of new nomenclature versions.</p>
+      <p class="description">The Nomenclature concept describes an abstract representation of the subdivisions of a territory into Levels and Territorial Units (i.e. also called 'Structure'). A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. </p>
 
   <div>
 
@@ -443,91 +496,6 @@ a RIF and OWL documentation service</h2>
 
 
 
-	<div class="term" id="md5-36310b9675a0a6f0eb314689eea3650d" about="http://purl.org/net/tsn#NomenclatureFeature">
-
-
-  <h3 id="anchor-664435248"> <a id="NomenclatureFeature"></a><span class="parrot-element-title parrot-class-title">NomenclatureFeature</span>
-
-		  	<span rel="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">(RDFS Class)</span>
-
-
-
-
-    <span class="menu">
-	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  <span class="inuse-menu" style="border-radius: 10px;">In use</span> 	      </span>
-  </h3>
-
-
-
-      <p class="description">The class NomenclatureFeature is the Superclass of any TSNComponent that can have a spatial representation. It is a subclass of the geo:Feature concept in the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)</p>
-
-  <div>
-
-
-    <div class="ti" style="border-radius: 10px; display: block;">
-  <h4>Definition</h4>
-			<p>The <strong>URI</strong> of this class is <span><code>http://purl.org/net/tsn#NomenclatureFeature</code></span></p>
-		<hr>
-
-		<table>
-		  <tbody><tr>
-	  <td>This class is a sub class of</td>
-	  <td>
-	  	  <span class="parrot-element-ref parrot-undefined-ref" rel="rdfs:subClassOf" href="http://www.opengis.net/ont/geosparql#Feature">              <a class="parrot-link" href="http://ontorule-project.eu/parrot/parrot?documentUri=http%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23Feature#anchor-1829421936">http://www.opengis.net/ont/geosparql#Feature</a>
-      </span>
-	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNComponent">            	<a href="#TSNComponent"> TSNComponent</a>
-      </span>
-	  	  </td>
-	  </tr>
-
-		  <tr>
-	  <td>This class is a super class of</td>
-	  <td>
-	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#TerritoryVersion">            	<a href="#TerritoryVersion"> TerritoryVersion</a>
-      </span>
-	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
-      </span>
-	  	  </td>
-	  </tr>
-
-
-		</tbody></table>
-
-  </div>
-
-    <div class="inuse" style="border-radius: 10px;">
-  <h4>In use</h4>
-
-   	    <table>
-	  			  <tbody><tr>
-		  <td>This class is used in</td>
-		  <td>
-		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#hasGeometry"> hasGeometry</a>
-      </span>
-		  		  </td>
-		  </tr>
-
-
-			</tbody></table>
-	  </div>
-
-
-  </div>
-</div>
-  </div>
-		  <div class="details classes" style="border-radius: 10px;">
-
-
-
-
-
-
-
-
-
-
-
-
 	<div class="term" id="md5-61ad5ae0c67f0bcea2e4d09650c1ce26" about="http://purl.org/net/tsn#NomenclatureVersion">
 
 
@@ -544,7 +512,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A NomenclatureVersion resource represents a unique state of a Nomenclature resource that is stable for an indicated period of time. Stability makes sure that statistical data refers to the same territorial unit for a certain period of time (source http://ec.europa.eu/eurostat/web/nuts/history). Nevertheless, the subdivisions of a territory may change after territorial changes (e.g., variation of the population rate leads to modification of a nomenclature that construct its Territorial Units on that criteria), resulting in new version of the subdivisions and of the Nomenclature resource.</p>
+      <p class="description">The NomenclatureVersion concept describes a unique representation of a Nomenclature, stable for a period of time. Stability ensures that statistical data refer to the same territorial units for a certain period of time (source http://ec.europa.eu/eurostat/web/nuts/history) (i.e., the reference period of the NomenclatureVersion).</p>
 
   <div>
 
@@ -584,9 +552,9 @@ a RIF and OWL documentation service</h2>
       </span>
 		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#isCoveredBy"> isCoveredBy</a>
       </span>
-		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#versionRights"> versionRights</a>
+		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#nomenclatureVersionSource"> nomenclatureVersionSource</a>
       </span>
-		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#versionSource"> versionSource</a>
+		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#versionRights"> versionRights</a>
       </span>
 		  		  </td>
 		  </tr>
@@ -628,7 +596,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A territory is an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). The boundaries of the territory define the study area of the Territorial Statistical Nomenclature that covers the territory.</p>
+      <p class="description">The Territory concept describes an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). For instance, the European Union is a territory, the Grenoble metropole is a territory, etc.</p>
 
   <div>
 
@@ -687,7 +655,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">A TerritoryVersion resource represents an unique state of a Territory resource. As the boundaries of a territory vary, due to annexation or cession operations, it results succesives versions of the territory. Thus, a territory may have as many versions as it underwent modifications. For instance, European Union of 27 and 28 member states are versions of the European Union territory.</p>
+      <p class="description">The TerritoryVersion concept describes a unique representation of a Territory at a specified period of time. As the boundaries of a territory may vary (e.g., fusion with another territory), it results succesives versions of it. A territory may have as many versions as it underwent modifications. For instance, the European Union of 27 and the European Union of 28 member states are two versions of the European Union territory.</p>
 
   <div>
 
@@ -701,7 +669,7 @@ a RIF and OWL documentation service</h2>
 		  <tbody><tr>
 	  <td>This class is a sub class of</td>
 	  <td>
-	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#NomenclatureFeature">            	<a href="#NomenclatureFeature"> NomenclatureFeature</a>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNFeature">            	<a href="#TSNFeature"> TSNFeature</a>
       </span>
 	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#Version">            	<a href="#Version"> Version</a>
       </span>
@@ -765,7 +733,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">The class TSNComponent is the Superclass of any Territorial Statistical Nomenclature components.</p>
+      <p class="description">The TSNComponent concept is the super class of any Territorial Statistical Nomenclature components.</p>
 
   <div>
 
@@ -784,9 +752,11 @@ a RIF and OWL documentation service</h2>
       </span>
 	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Nomenclature">            	<a href="#Nomenclature"> Nomenclature</a>
       </span>
-	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#NomenclatureFeature">            	<a href="#NomenclatureFeature"> NomenclatureFeature</a>
-      </span>
 	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Territory">            	<a href="#Territory"> Territory</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNFeature">            	<a href="#TSNFeature"> TSNFeature</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
       </span>
 	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Version">            	<a href="#Version"> Version</a>
       </span>
@@ -812,6 +782,97 @@ a RIF and OWL documentation service</h2>
 		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#hasIdentifier"> hasIdentifier</a>
       </span>
 		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#hasName"> hasName</a>
+      </span>
+		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#hasVersion"> hasVersion</a>
+      </span>
+		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#isVersionOf"> isVersionOf</a>
+      </span>
+		  		  </td>
+		  </tr>
+
+
+			</tbody></table>
+	  </div>
+
+
+  </div>
+</div>
+  </div>
+		  <div class="details classes" style="border-radius: 10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="term" id="md5-cabd7c35788320b2a9db443a056eda46" about="http://purl.org/net/tsn#TSNFeature">
+
+
+  <h3 id="anchor749593556"> <a id="TSNFeature"></a><span class="parrot-element-title parrot-class-title">TSNFeature</span>
+
+		  	<span rel="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">(RDFS Class)</span>
+
+
+
+
+    <span class="menu">
+	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  <span class="inuse-menu" style="border-radius: 10px;">In use</span> 	      </span>
+  </h3>
+
+
+
+      <p class="description">The TSNFeature concept is the super class of features of a TSN (i.e., a geographic resource). The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geo:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)</p>
+
+  <div>
+
+
+    <div class="ti" style="border-radius: 10px; display: block;">
+  <h4>Definition</h4>
+			<p>The <strong>URI</strong> of this class is <span><code>http://purl.org/net/tsn#TSNFeature</code></span></p>
+		<hr>
+
+		<table>
+		  <tbody><tr>
+	  <td>This class is a sub class of</td>
+	  <td>
+	  	  <span class="parrot-element-ref parrot-undefined-ref" rel="rdfs:subClassOf" href="http://www.opengis.net/ont/geosparql#Feature">              <a class="parrot-link" href="http://ontorule-project.eu/parrot/parrot?documentUri=http%3A%2F%2Fwww.opengis.net%2Font%2Fgeosparql%23Feature#anchor-1829421936">http://www.opengis.net/ont/geosparql#Feature</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNComponent">            	<a href="#TSNComponent"> TSNComponent</a>
+      </span>
+	  	  </td>
+	  </tr>
+
+		  <tr>
+	  <td>This class is a super class of</td>
+	  <td>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#TerritoryVersion">            	<a href="#TerritoryVersion"> TerritoryVersion</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
+      </span>
+	  	  </td>
+	  </tr>
+
+
+		</tbody></table>
+
+  </div>
+
+    <div class="inuse" style="border-radius: 10px;">
+  <h4>In use</h4>
+
+   	    <table>
+	  			  <tbody><tr>
+		  <td>This class is used in</td>
+		  <td>
+		  		  <span class="parrot-element-ref parrot-property-ref">            	<a href="#hasGeometry"> hasGeometry</a>
       </span>
 		  		  </td>
 		  </tr>
@@ -848,12 +909,12 @@ a RIF and OWL documentation service</h2>
 
 
     <span class="menu">
-	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  <span class="inuse-menu" style="border-radius: 10px;">In use</span> 	      </span>
+	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>
   </h3>
 
 
 
-      <p class="description">Each level of a Territorial Statistical Nomenclature is split into Territorial Units i.e., a piece of geographic space that may contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature).</p>
+      <p class="description">The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit.</p>
 
   <div>
 
@@ -867,7 +928,68 @@ a RIF and OWL documentation service</h2>
 		  <tbody><tr>
 	  <td>This class is a sub class of</td>
 	  <td>
-	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#NomenclatureFeature">            	<a href="#NomenclatureFeature"> NomenclatureFeature</a>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNComponent">            	<a href="#TSNComponent"> TSNComponent</a>
+      </span>
+	  	  </td>
+	  </tr>
+
+
+
+		</tbody></table>
+
+  </div>
+
+
+
+  </div>
+</div>
+  </div>
+		  <div class="details classes" style="border-radius: 10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="term" id="md5-b00e659f3566620c03d12c711ce8e2ae" about="http://purl.org/net/tsn#UnitVersion">
+
+
+  <h3 id="anchor-57103611"> <a id="UnitVersion"></a><span class="parrot-element-title parrot-class-title">UnitVersion</span>
+
+		  	<span rel="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class">(RDFS Class)</span>
+
+
+
+
+    <span class="menu">
+	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  <span class="inuse-menu" style="border-radius: 10px;">In use</span> 	      </span>
+  </h3>
+
+
+
+      <p class="description">The UnitVersion concept describes a unique representation of a Unit, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the UnitVersion belongs to.</p>
+
+  <div>
+
+
+    <div class="ti" style="border-radius: 10px; display: block;">
+  <h4>Definition</h4>
+			<p>The <strong>URI</strong> of this class is <span><code>http://purl.org/net/tsn#UnitVersion</code></span></p>
+		<hr>
+
+		<table>
+		  <tbody><tr>
+	  <td>This class is a sub class of</td>
+	  <td>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNFeature">            	<a href="#TSNFeature"> TSNFeature</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rel="rdfs:subClassOf" href="http://purl.org/net/tsn#Version">            	<a href="#Version"> Version</a>
       </span>
 	  	  </td>
 	  </tr>
@@ -933,7 +1055,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">The class Version is the Superclass of component that are a version of a TSNComponent. A version corresponds to an unique state of a TSNComponent resource.</p>
+      <p class="description">The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. </p>
 
   <div>
 
@@ -955,9 +1077,13 @@ a RIF and OWL documentation service</h2>
 		  <tr>
 	  <td>This class is a super class of</td>
 	  <td>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
+      </span>
 	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#NomenclatureVersion">            	<a href="#NomenclatureVersion"> NomenclatureVersion</a>
       </span>
 	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#TerritoryVersion">            	<a href="#TerritoryVersion"> TerritoryVersion</a>
+      </span>
+	  	  <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
 	  	  </td>
 	  </tr>
@@ -1018,9 +1144,9 @@ a RIF and OWL documentation service</h2>
 	, 	  			<a href="#anchor1617741095">isPredecessorOf</a>
 	, 	  			<a href="#anchor855877124">isSuccessorOf</a>
 	, 	  			<a href="#anchor758232886">isVersionOf</a>
+	, 	  			<a href="#anchor183624141">nomenclatureVersionSource</a>
 	, 	  			<a href="#anchor-938448803">referencePeriod</a>
 	, 	  			<a href="#anchor-26025792">versionRights</a>
-	, 	  			<a href="#anchor8570628">versionSource</a>
 		  	</p>
 	</div>
 
@@ -1054,7 +1180,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the Level the described Unit resource belongs to.</p>
+      <p class="description">Indicates the LevelVersion the described UnitVersion resource belongs to.</p>
 
   <div>
 
@@ -1076,7 +1202,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1086,7 +1212,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1134,7 +1260,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the NomenclatureVersion the described Level resource belongs to.</p>
+      <p class="description">Indicates the NomenclatureVersion the described LevelVersion resource belongs to.</p>
 
   <div>
 
@@ -1156,7 +1282,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1369,7 +1495,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a Description of a TSNComponent. It may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the TSNComponent</p>
+      <p class="description">Indicates a Description of a TSNComponent. It may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the TSNComponent.</p>
 
   <div>
 
@@ -1437,7 +1563,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a Geometry of a spatial resource (i.e., NomenclatureFeature (TerritoryVersion or Unit) resource)</p>
+      <p class="description">Indicates a Geometry of a spatial resource (i.e., TSNFeature (TerritoryVersion, LevelVersion or UnitVersion) resource)</p>
 
   <div>
 
@@ -1454,7 +1580,7 @@ a RIF and OWL documentation service</h2>
            <tbody><tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#NomenclatureFeature">            	<a href="#NomenclatureFeature"> NomenclatureFeature</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#TSNFeature">            	<a href="#TSNFeature"> TSNFeature</a>
       </span>
       	  </td>
       </tr>
@@ -1512,7 +1638,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates an unambiguous reference to a TSNComponent within the context of one Version (i.e., NomenclatureVersion or TerritoryVersion). N.B., this indentifier may be the same from one NomenclatureVersion to another even if the TSNComponent resource has undergone significant changes from one version to another (e.g., Expansion of a Unit resource due to Integration event). Then, this may cause problem when this identifier is used in front of a statistical mesure without mentionning the NomenclatureVersion considered. Then, in order to uniquely identify TSNComponent resources within the Web of Data, the URI of the component indicates the Nomenclature identifier of the TSNComponent plus the NomenclatureVersion it belongs to.</p>
+      <p class="description">Indicates an unambiguous reference to a TSNComponent, throughout the TSN versions. This attribut holds the identity of the TSNComponent i.e., if it changes then the TSNComponent ceases to exist.</p>
 
   <div>
 
@@ -1587,7 +1713,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a level in the NomenclatureVersion hierarchy.</p>
+      <p class="description">Indicates a LevelVersion in the NomenclatureVersion hierarchy.</p>
 
   <div>
 
@@ -1619,7 +1745,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1667,7 +1793,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the level that is immediately below the described level.</p>
+      <p class="description">Indicates the LevelVersion that is immediately below the described LevelVersion.</p>
 
   <div>
 
@@ -1689,7 +1815,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1699,7 +1825,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1747,7 +1873,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a Name of a TSNComponent</p>
+      <p class="description">Indicates the Name of a TSNComponent.</p>
 
   <div>
 
@@ -1822,7 +1948,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a Unit that is contained (spatially or not, as, for instance, an administrative hierarchy may be based on other criteria than spatial criteria) in the described Unit (i.e., this unit belongs to a level that is below the level of the described unit).</p>
+      <p class="description">Indicates a UnitVersion that is contained (spatially or not, as, for instance, an administrative hierarchy may be based on other criteria than spatial criteria) in the described UnitVersion.</p>
 
   <div>
 
@@ -1844,7 +1970,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1854,7 +1980,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1902,7 +2028,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the Unit that is immediately above/contains the described Unit (i.e., this unit belongs to a level that is above the level of the described unit).</p>
+      <p class="description">Indicates the UnitVersion that is immediately above/contains the described UnitVersion.</p>
 
   <div>
 
@@ -1924,7 +2050,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1934,7 +2060,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
       	  </td>
       </tr>
@@ -1982,7 +2108,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a Unit that belongs to the described Level.</p>
+      <p class="description">Indicates a UnitVersion that belongs to the described LevelVersion.</p>
 
   <div>
 
@@ -2004,7 +2130,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -2014,7 +2140,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#UnitVersion">            	<a href="#UnitVersion"> UnitVersion</a>
       </span>
       	  </td>
       </tr>
@@ -2062,7 +2188,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the level that is immediately above the described level.</p>
+      <p class="description">Indicates the LevelVersion that is immediately above the described LevelVersion.</p>
 
   <div>
 
@@ -2084,7 +2210,7 @@ a RIF and OWL documentation service</h2>
            <tr>
             <td>The domain of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -2094,7 +2220,7 @@ a RIF and OWL documentation service</h2>
           <tr>
              <td>The range of this property is</td>
       	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#LevelVersion">            	<a href="#LevelVersion"> LevelVersion</a>
       </span>
       	  </td>
       </tr>
@@ -2142,7 +2268,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a resource is a Version (i.e., TerritoryVersion or NomenclatureVersion resource), edition, or adaptation of the described resource (i.e., a Nomenclature or Territory resource).</p>
+      <p class="description">Indicates a resource is a Version, edition, or adaptation of the described resource.</p>
 
   <div>
 
@@ -2161,6 +2287,13 @@ a RIF and OWL documentation service</h2>
       </tr>
 
 
+           <tr>
+            <td>The domain of this property is</td>
+      	  <td>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#TSNComponent">            	<a href="#TSNComponent"> TSNComponent</a>
+      </span>
+      	  </td>
+      </tr>
 
 
 
@@ -2295,7 +2428,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the predecessor Version of a Version resource (i.e., NomenclatureVersion, TerritoryVersion)</p>
+      <p class="description">Indicates the predecessor Version of a Version resource.</p>
 
   <div>
 
@@ -2375,7 +2508,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the successor Version of a Version resource (i.e., NomenclatureVersion, TerritoryVersion)</p>
+      <p class="description">Indicates the successor Version of a Version resource.</p>
 
   <div>
 
@@ -2455,7 +2588,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates a resource (i.e., a Nomenclature or Territory resource) of which the described resource (i.e., TerritoryVersion or NomenclatureVersion) is a version, edition, or adaptation.</p>
+      <p class="description">Indicates a TSNComponent of which the described resource is a version, edition, or adaptation.</p>
 
   <div>
 
@@ -2484,6 +2617,88 @@ a RIF and OWL documentation service</h2>
 
 
 
+          <tr>
+             <td>The range of this property is</td>
+      	  <td>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/net/tsn#TSNComponent">            	<a href="#TSNComponent"> TSNComponent</a>
+      </span>
+      	  </td>
+      </tr>
+
+
+
+
+
+
+        </tbody></table>
+       </div>
+
+
+
+
+  </div>
+</div>   </div>
+		<div class="details properties" style="border-radius: 10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="term" id="md5-97c07f2b3e7e2de3170462f395a5533c" about="http://purl.org/net/tsn#nomenclatureVersionSource">
+
+
+  <h3 id="anchor183624141"> <a id="nomenclatureVersionSource"></a><span class="parrot-element-title parrot-property-title">nomenclatureVersionSource</span> (Property)
+
+
+
+
+
+
+
+    <span class="menu">
+	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>   </h3>
+
+
+
+      <p class="description">A related resource from which the described resource is derived. Example: European Commission - http://ec.europa.eu/eurostat/ramon/nuts/codelist_en.cfm?list=nuts</p>
+
+  <div>
+
+
+    <div class="ti" style="border-radius: 10px; display: block;">
+  <h4>Definition</h4>
+
+			<p>The <strong>URI</strong> of this property is <span><code>http://purl.org/net/tsn#nomenclatureVersionSource</code></span></p>
+
+
+        <table>
+
+
+           <tbody><tr>
+            <td>The domain of this property is</td>
+      	  <td>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#NomenclatureVersion">            	<a href="#NomenclatureVersion"> NomenclatureVersion</a>
+      </span>
+      	  </td>
+      </tr>
+
+
+
+          <tr>
+             <td>The range of this property is</td>
+      	  <td>
+            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/dc/terms/source">              <a class="parrot-link" href="http://ontorule-project.eu/parrot/parrot?documentUri=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fsource#anchor-1725420854">dcterm:source</a>
+      </span>
+      	  </td>
+      </tr>
 
 
 
@@ -2528,7 +2743,7 @@ a RIF and OWL documentation service</h2>
 
 
 
-      <p class="description">Indicates the period of time (i.e., Interval defined with two point in time &lt;https://www.w3.org/2006/time#hasBeginning&gt; and &lt;https://www.w3.org/2006/time#hasEnd&gt;) to which a Version resource (i.e., NomenclatureVersion, TerritoryVersion) is stable and considered as the official one. </p>
+      <p class="description">Indicates the period of time (i.e., Interval defined with two point in time &lt;https://www.w3.org/2006/time#hasBeginning&gt; and &lt;https://www.w3.org/2006/time#hasEnd&gt;) to which a Version resource  is stable and considered as the official one.</p>
 
   <div>
 
@@ -2648,89 +2863,14 @@ a RIF and OWL documentation service</h2>
 
   </div>
 </div>   </div>
-		<div class="details properties" style="border-radius: 10px;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div class="term" id="md5-59c182b33953d3db8ba79da8450ece50" about="http://purl.org/net/tsn#versionSource">
-
-
-  <h3 id="anchor8570628"> <a id="versionSource"></a><span class="parrot-element-title parrot-property-title">versionSource</span> (Property)
-
-
-
-
-
-
-
-    <span class="menu">
-	  	  <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>   </h3>
-
-
-
-      <p class="description">A related resource from which the described resource is derived. Example: European Commission - http://ec.europa.eu/eurostat/ramon/nuts/codelist_en.cfm?list=nuts</p>
-
-  <div>
-
-
-    <div class="ti" style="border-radius: 10px; display: block;">
-  <h4>Definition</h4>
-
-			<p>The <strong>URI</strong> of this property is <span><code>http://purl.org/net/tsn#versionSource</code></span></p>
-
-
-        <table>
-
-
-           <tbody><tr>
-            <td>The domain of this property is</td>
-      	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://purl.org/net/tsn#NomenclatureVersion">            	<a href="#NomenclatureVersion"> NomenclatureVersion</a>
-      </span>
-      	  </td>
-      </tr>
-
-
-
-          <tr>
-             <td>The range of this property is</td>
-      	  <td>
-            <span class="parrot-element-ref parrot-class-ref" rel="rdfs:range" href="http://purl.org/dc/terms/source">              <a class="parrot-link" href="http://ontorule-project.eu/parrot/parrot?documentUri=http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fsource#anchor-1725420854">dcterm:source</a>
-      </span>
-      	  </td>
-      </tr>
-
-
-
-
-
-
-        </tbody></table>
-       </div>
-
-
-
-
-  </div>
-</div>   </div>
 
 	<div class="toc" id="individuals" style="border-radius: 10px;">
 	<h2>Individuals</h2>
 	<p>
-		  	<a href="#anchor-1999067897">individual432927278</a>
-	, 		  	<a href="#anchor-1999067896">individual432927279</a>
-	, 		  	<a href="#anchor-1999067874">individual432927280</a>
-	, 		  	<a href="#anchor-1999067873">individual432927281</a>
+		  	<a href="#anchor666452315">individual2054931776</a>
+	, 		  	<a href="#anchor666452316">individual2054931777</a>
+	, 		  	<a href="#anchor666452317">individual2054931778</a>
+	, 		  	<a href="#anchor666452318">individual2054931779</a>
 			</p>
 	</div>
 
@@ -2751,7 +2891,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor-1999067897"><span class="parrot-element-title parrot-individual-title">individual432927278</span> (Individual)
+   <h3 id="anchor666452315"><span class="parrot-element-title parrot-individual-title">individual2054931776</span> (Individual)
 
 
     <span class="menu">
@@ -2786,7 +2926,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor-1999067896"><span class="parrot-element-title parrot-individual-title">individual432927279</span> (Individual)
+   <h3 id="anchor666452316"><span class="parrot-element-title parrot-individual-title">individual2054931777</span> (Individual)
 
 
     <span class="menu">
@@ -2821,7 +2961,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor-1999067874"><span class="parrot-element-title parrot-individual-title">individual432927280</span> (Individual)
+   <h3 id="anchor666452317"><span class="parrot-element-title parrot-individual-title">individual2054931778</span> (Individual)
 
 
     <span class="menu">
@@ -2856,7 +2996,7 @@ a RIF and OWL documentation service</h2>
 	<div class="term">
 
 
-   <h3 id="anchor-1999067873"><span class="parrot-element-title parrot-individual-title">individual432927281</span> (Individual)
+   <h3 id="anchor666452318"><span class="parrot-element-title parrot-individual-title">individual2054931779</span> (Individual)
 
 
     <span class="menu">
@@ -2890,17 +3030,20 @@ a RIF and OWL documentation service</h2>
 <dt>Level</dt>
 	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor338687317">  Level</a>
       </span></dd>
+<dt>LevelVersion</dt>
+	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor-1970301215">  LevelVersion</a>
+      </span></dd>
 <dt>Nomenclature</dt>
 	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor1589853604">  Nomenclature</a>
-      </span></dd>
-<dt>NomenclatureFeature</dt>
-	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor-664435248">  NomenclatureFeature</a>
       </span></dd>
 <dt>NomenclatureVersion</dt>
 	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor666380210">  NomenclatureVersion</a>
       </span></dd>
 <dt>TSNComponent</dt>
 	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor2120438299">  TSNComponent</a>
+      </span></dd>
+<dt>TSNFeature</dt>
+	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor749593556">  TSNFeature</a>
       </span></dd>
 <dt>Territorial Statistical Nomenclature Ontology</dt>
 	<dd><span class="parrot-element-ref parrot-ontology-ref">            	 <a href="#anchor-981968115">  Territorial Statistical Nomenclature Ontology</a>
@@ -2913,6 +3056,9 @@ a RIF and OWL documentation service</h2>
       </span></dd>
 <dt>Unit</dt>
 	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor1258127793">  Unit</a>
+      </span></dd>
+<dt>UnitVersion</dt>
+	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor-57103611">  UnitVersion</a>
       </span></dd>
 <dt>Version</dt>
 	<dd><span class="parrot-element-ref parrot-class-ref">            	 <a href="#anchor-657206743">  Version</a>
@@ -2974,14 +3120,14 @@ a RIF and OWL documentation service</h2>
 <dt>isVersionOf</dt>
 	<dd><span class="parrot-element-ref parrot-property-ref">            	 <a href="#anchor758232886">  isVersionOf</a>
       </span></dd>
+<dt>nomenclatureVersionSource</dt>
+	<dd><span class="parrot-element-ref parrot-property-ref">            	 <a href="#anchor183624141">  nomenclatureVersionSource</a>
+      </span></dd>
 <dt>referencePeriod</dt>
 	<dd><span class="parrot-element-ref parrot-property-ref">            	 <a href="#anchor-938448803">  referencePeriod</a>
       </span></dd>
 <dt>versionRights</dt>
 	<dd><span class="parrot-element-ref parrot-property-ref">            	 <a href="#anchor-26025792">  versionRights</a>
-      </span></dd>
-<dt>versionSource</dt>
-	<dd><span class="parrot-element-ref parrot-property-ref">            	 <a href="#anchor8570628">  versionSource</a>
       </span></dd>
 
 </dl>
@@ -3037,7 +3183,7 @@ a RIF and OWL documentation service</h2>
 
 	<!-- Feedback -->
 	<div>
-	<img id="feedback" src="index_fichiers/feedback.png" alt="feedback" style="background-color: rgb(132, 112, 255); left: 0px; top: 288px; position: fixed;" height="100" width="30">
+	<img id="feedback" src="index_fichiers/feedback.png" alt="feedback" style="background-color: rgb(132, 112, 255); left: 0px; top: 288px; position: fixed;" width="30" height="100">
 
 	</div>
   <!-- standalone -->
