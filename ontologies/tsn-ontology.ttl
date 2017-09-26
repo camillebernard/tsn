@@ -133,20 +133,6 @@ tsn:hasDescription  a rdf:Property ;
 
 # ----------------- Version properties -----------------
 
-tsn:isSuccessorOf  a rdf:Property ;
-   rdfs:label "isSuccessorOf"@en ;
-   rdfs:comment "Indicates the successor Version of a Version resource."@en ;
-   rdfs:domain  tsn:Version ;
-   rdfs:range  tsn:Version ;
-   owl:inverseOf  tsn:isPredecessorOf .
-
-tsn:isPredecessorOf  a rdf:Property ;
-   rdfs:label "isPredecessorOf"@en ;
-   rdfs:comment "Indicates the predecessor Version of a Version resource."@en ;
-   rdfs:domain  tsn:Version ;
-   rdfs:range  tsn:Version ;
-   owl:inverseOf  tsn:isSuccessorOf .
-
 tsn:referencePeriod  a rdf:Property ;
    rdfs:label "referencePeriod"@en ;
    rdfs:comment "Indicates the period of time (i.e., Interval defined with two point in time <https://www.w3.org/2006/time#hasBeginning> and <https://www.w3.org/2006/time#hasEnd>) to which a Version resource  is stable and considered as the official one."@en ;
