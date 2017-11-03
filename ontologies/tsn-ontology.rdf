@@ -8,271 +8,269 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasSubUnit">
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
-    <rdfs:comment xml:lang="en">Indicates a UnitVersion that is contained (spatially or not, as, for instance, an administrative hierarchy may be based on other criteria than spatial criteria) in the described UnitVersion.</rdfs:comment>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasVersion">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#hasSubRegion"/>
-    <rdfs:label xml:lang="en">hasSubUnit</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#TSNComponent">
-    <rdfs:comment>The TSNComponent concept is the super class of any Territorial Statistical Nomenclature components.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">TSNComponent</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#Version">
-    <rdfs:label xml:lang="en">Version</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:comment xml:lang="en">The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. </rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasIdentifier">
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
-    <rdfs:comment xml:lang="en">Indicates an unambiguous reference to a TSNComponent, throughout the TSN versions. This attribut holds the identity of the TSNComponent i.e., if it changes then the TSNComponent ceases to exist.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:label xml:lang="en">hasIdentifier</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#isVersionOf"/>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#Version"/>
     <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+    <rdfs:comment xml:lang="en">Indicates a resource is a Version, edition, or adaptation of the described resource.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasVersion</rdfs:label>
   </rdf:Description>
-
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasLowerLevel">
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasUpperLevel"/>
-    <rdfs:label xml:lang="en">hasLowerLevel</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates the LevelVersion that is immediately below the described LevelVersion.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasDescription">
-    <rdfs:comment xml:lang="en">Indicates a Description of a TSNComponent. It may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the TSNComponent.</rdfs:comment>
-    <rdfs:label xml:lang="en">hasDescription</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub6bL22C10">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:name>Jérôme GENSEL</foaf:name>
-    <foaf:homepage rdf:resource="http://lig-membres.imag.fr/gensel/"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasLevel">
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Indicates a LevelVersion in the NomenclatureVersion hierarchy.</rdfs:comment>
-    <rdfs:label xml:lang="en">hasLevel</rdfs:label>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasUpperLevel">
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasLowerLevel"/>
-    <rdfs:label xml:lang="en">hasUpperLevel</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates the LevelVersion that is immediately above the described LevelVersion.</rdfs:comment>
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#TSNFeature">
-    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-    <rdfs:label xml:lang="en">TSNFeature</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:comment xml:lang="en">The TSNFeature concept is the super class of features of a TSN (i.e., a geographic resource). The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geo:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#belongsToLevel">
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
-    <rdfs:comment xml:lang="en">Indicates the LevelVersion the described UnitVersion resource belongs to.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasUnit"/>
-    <rdfs:label xml:lang="en">belongsToLevel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#Unit">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Unit</rdfs:label>
-    <rdfs:comment xml:lang="en">The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit.</rdfs:comment>
-    <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#Unit"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-  </rdf:Description>
-  
-  <rdf:Description rdf:about="http://purl.org/net/tsn#">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-31</dcterms:modified>
-    <dcterms:creator rdf:nodeID="ub6bL21C10"/>
-    <dcterms:creator rdf:nodeID="ub6bL20C18"/>
-    <vann:preferredNamespacePrefix>tsn</vann:preferredNamespacePrefix>
-    <dcterms:description xml:lang="en">This RDF ontology allows describing any Territorial Statistical Nomenclature (TSN) (i.e., partition of the territory) used as a support to socio-economic data (statistical data that describe territory in terms of population, unemployement rate, transport access, etc.).</dcterms:description>
-    <dcterms:creator rdf:nodeID="ub6bL23C10"/>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-31</dcterms:issued>
-    <rdfs:comment>First version of the vocabulary</rdfs:comment>
-    <dcterms:creator rdf:nodeID="ub6bL22C10"/>
-    <cc:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
-    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-    <dcterms:publisher rdf:resource="http://steamer.imag.fr"/>
-    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-    <vann:preferredNamespaceUri rdf:resource="http://purl.org/net/tsn#"/>
-    <dcterms:title xml:lang="en">Territorial Statistical Nomenclature Ontology</dcterms:title>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#Territory">
-    <rdfs:label xml:lang="en">Territory</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-    <rdfs:comment xml:lang="en">The Territory concept describes an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). For instance, the European Union is a territory, the Grenoble metropole is a territory, etc.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#covers">
-    <rdfs:comment xml:lang="en">Indicates a TerritoryVersion covered by a NomenclatureVersion i.e., the TerritoryVersion is the spatial applicability of the NomenclatureVersion.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#TerritoryVersion"/>
-    <rdfs:label xml:lang="en">covers</rdfs:label>
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#isCoveredBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#NomenclatureVersion">
-    <rdfs:label xml:lang="en">NomenclatureVersion</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#UnitVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The UnitVersion concept describes a unique representation of a Unit, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the UnitVersion belongs to.</rdfs:comment>
+    <rdfs:label xml:lang="en">UnitVersion</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
-    <rdfs:comment xml:lang="en">The NomenclatureVersion concept describes a unique representation of a Nomenclature, stable for a period of time. Stability ensures that statistical data refer to the same territorial units for a certain period of time (source http://ec.europa.eu/eurostat/web/nuts/history) (i.e., the reference period of the NomenclatureVersion).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub212bL21C10">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:homepage rdf:resource="http://lig-membres.imag.fr/villanov/"/>
+    <foaf:name>Marlène VILLANOVA-OLIVER</foaf:name>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/tsn#isCoveredBy">
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TerritoryVersion"/>
-    <rdfs:label xml:lang="en">isCoveredBy</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates a NomenclatureVersion that covers a TerritoryVersion i.e., the TerritoryVersion is the spatial applicability of the NomenclatureVersion.</rdfs:comment>
     <owl:inverseOf rdf:resource="http://purl.org/net/tsn#covers"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">Indicates a NomenclatureVersion that covers a TerritoryVersion i.e., the TerritoryVersion is the spatial applicability of the NomenclatureVersion.</rdfs:comment>
     <rdfs:range rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
+    <rdfs:label xml:lang="en">isCoveredBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TerritoryVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub212bL22C10">
+    <foaf:name>Jérôme GENSEL</foaf:name>
+    <foaf:homepage rdf:resource="http://lig-membres.imag.fr/gensel/"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#Territory">
+    <rdfs:comment xml:lang="en">The Territory concept describes an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). For instance, the European Union is a territory, the Grenoble metropole is a territory, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Territory</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#">
+    <dcterms:creator rdf:nodeID="ub212bL20C18"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <vann:preferredNamespacePrefix>tsn</vann:preferredNamespacePrefix>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-31</dcterms:issued>
+    <dcterms:title xml:lang="en">Territorial Statistical Nomenclature Ontology</dcterms:title>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    <dcterms:publisher rdf:resource="http://steamer.imag.fr"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:creator rdf:nodeID="ub212bL21C10"/>
+    <dcterms:creator rdf:nodeID="ub212bL22C10"/>
+    <cc:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
+    <dcterms:description xml:lang="en">This RDF ontology allows describing any Territorial Statistical Nomenclature (TSN) (i.e., partition of the territory) used as a support to socio-economic data (statistical data that describe territory in terms of population, unemployement rate, transport access, etc.).</dcterms:description>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdfs:comment>First version of the vocabulary</rdfs:comment>
+    <dcterms:creator rdf:nodeID="ub212bL23C10"/>
+    <vann:preferredNamespaceUri rdf:resource="http://purl.org/net/tsn#"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-31</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub212bL23C10">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Hy DAO</foaf:name>
+    <foaf:homepage rdf:resource="https://unige.ch/gedt/membres/dao/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasName">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">hasName</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+    <rdfs:comment xml:lang="en">Indicates the Name of a TSNComponent.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#Level">
+    <rdfs:comment xml:lang="en">The Level concept describes a level of observation of the Territory defined within the Nomenclature. Several levels of observation may be defined (e.g., region or district levels)</rdfs:comment>
+    <rdfs:label xml:lang="en">Level</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#NomenclatureVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">NomenclatureVersion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
+    <rdfs:comment xml:lang="en">The NomenclatureVersion concept describes a unique representation of a Nomenclature, stable for a period of time. Stability ensures that statistical data refer to the same territorial units for a certain period of time (source http://ec.europa.eu/eurostat/web/nuts/history) (i.e., the reference period of the NomenclatureVersion).</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/tsn#hasUnit">
     <rdfs:label xml:lang="en">hasUnit</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:comment xml:lang="en">Indicates a UnitVersion that belongs to the described LevelVersion.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
     <rdfs:range rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#UnitVersion">
-    <rdfs:label xml:lang="en">UnitVersion</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
-    <rdfs:comment xml:lang="en">The UnitVersion concept describes a unique representation of a Unit, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the UnitVersion belongs to.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasUpperLevel">
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
+    <rdfs:label xml:lang="en">hasUpperLevel</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasLowerLevel"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">Indicates the LevelVersion that is immediately above the described LevelVersion.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/tsn#belongsToNomenclatureVersion">
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasLevel"/>
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
     <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
+    <rdfs:comment xml:lang="en">Indicates the NomenclatureVersion the described LevelVersion resource belongs to.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasLevel"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">belongsToNomenclatureVersion</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates the NomenclatureVersion the described LevelVersion resource belongs to.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#Nomenclature">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:label xml:lang="en">Nomenclature</rdfs:label>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#Version">
     <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-    <rdfs:comment xml:lang="en">The Nomenclature concept describes an abstract representation of the subdivisions of a territory into Levels and Territorial Units (i.e. also called 'Structure'). A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. </rdfs:comment>
+    <rdfs:comment xml:lang="en">The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Version</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#referencePeriod">
-    <rdfs:label xml:lang="en">referencePeriod</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#Version"/>
-    <rdfs:range rdf:resource="https://www.w3.org/2006/time#Interval"/>
-    <rdfs:comment xml:lang="en">Indicates the period of time (i.e., Interval defined with two point in time &lt;https://www.w3.org/2006/time#hasBeginning&gt; and &lt;https://www.w3.org/2006/time#hasEnd&gt;) to which a Version resource  is stable and considered as the official one.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="ub6bL21C10">
-    <foaf:name>Marlène VILLANOVA-OLIVER</foaf:name>
+  <rdf:Description rdf:nodeID="ub212bL20C18">
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:homepage rdf:resource="http://lig-membres.imag.fr/villanov/"/>
+    <foaf:homepage rdf:resource="http://lig-membres.imag.fr/bernardc/"/>
+    <foaf:name>Camille BERNARD</foaf:name>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#TerritoryVersion">
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
-    <rdfs:label xml:lang="en">TerritoryVersion</rdfs:label>
-    <rdfs:comment xml:lang="en">The TerritoryVersion concept describes a unique representation of a Territory at a specified period of time. As the boundaries of a territory may vary (e.g., fusion with another territory), it results succesives versions of it. A territory may have as many versions as it underwent modifications. For instance, the European Union of 27 and the European Union of 28 member states are two versions of the European Union territory.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasName">
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasLowerLevel">
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Indicates the Name of a TSNComponent.</rdfs:comment>
-    <rdfs:label xml:lang="en">hasName</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment xml:lang="en">Indicates the LevelVersion that is immediately below the described LevelVersion.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasLowerLevel</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasUpperLevel"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#nomenclatureVersionSource">
-    <rdfs:range rdf:resource="http://purl.org/dc/terms/source"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">nomenclatureVersionSource</rdfs:label>
-    <rdfs:comment xml:lang="en">A related resource from which the described resource is derived. Example: European Commission - http://ec.europa.eu/eurostat/ramon/nuts/codelist_en.cfm?list=nuts</rdfs:comment>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#covers">
+    <rdfs:label xml:lang="en">covers</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates a TerritoryVersion covered by a NomenclatureVersion i.e., the TerritoryVersion is the spatial applicability of the NomenclatureVersion.</rdfs:comment>
     <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasAcronym">
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#TerritoryVersion"/>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#isCoveredBy"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Indicates an Acronym of a TSNComponent (e.g., EU27 is the prefered acronym used to designate the European Union made of 27 members).</rdfs:comment>
-    <rdfs:label xml:lang="en">hasAcronym</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasGeometry">
-    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-    <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Indicates a Geometry of a spatial resource (i.e., TSNFeature (TerritoryVersion, LevelVersion or UnitVersion) resource)</rdfs:comment>
-    <owl:sameAs rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#versionRights">
-    <rdfs:comment xml:lang="en">Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
-    <rdfs:range rdf:resource="http://purl.org/dc/terms/rights"/>
-    <rdfs:label xml:lang="en">versionRights</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#hasVersion">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Indicates a resource is a Version, edition, or adaptation of the described resource.</rdfs:comment>
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#isVersionOf"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasVersion"/>
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#Version"/>
-    <rdfs:label xml:lang="en">hasVersion</rdfs:label>
-    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/tsn#hasSuperUnit">
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasSubUnit"/>
-    <rdfs:range rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
+    <rdfs:label xml:lang="en">hasSuperUnit</rdfs:label>
     <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#hasParentRegion"/>
     <rdfs:domain rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
     <rdfs:comment xml:lang="en">Indicates the UnitVersion that is immediately above/contains the described UnitVersion.</rdfs:comment>
-    <rdfs:label xml:lang="en">hasSuperUnit</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasSubUnit"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#LevelVersion">
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
-    <rdfs:label xml:lang="en">LevelVersion</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
-    <rdfs:comment xml:lang="en">The LevelVersion concept describes a unique representation of a Level, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the LevelVersion belongs to.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/net/tsn#Level">
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-    <rdfs:label xml:lang="en">Level</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:comment xml:lang="en">The Level concept describes a level of observation of the Territory defined within the Nomenclature. Several levels of observation may be defined (e.g., region or district levels)</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/tsn#isVersionOf">
-    <rdfs:label xml:lang="en">isVersionOf</rdfs:label>
     <rdfs:domain rdf:resource="http://purl.org/net/tsn#Version"/>
-    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasVersion"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:range rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
     <rdfs:comment xml:lang="en">Indicates a TSNComponent of which the described resource is a version, edition, or adaptation.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">isVersionOf</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasVersion"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ub6bL23C10">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:name>Hy DAO</foaf:name>
-    <foaf:homepage rdf:resource="https://unige.ch/gedt/membres/dao/"/>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">hasIdentifier</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates an unambiguous reference to a TSNComponent, throughout the TSN versions. This attribut holds the identity of the TSNComponent i.e., if it changes then the TSNComponent ceases to exist.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="ub6bL20C18">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:name>Camille BERNARD</foaf:name>
-    <foaf:homepage rdf:resource="http://lig-membres.imag.fr/bernardc/"/>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#referencePeriod">
+    <rdfs:range rdf:resource="https://www.w3.org/2006/time#Interval"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">referencePeriod</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the period of time (i.e., Interval defined with two point in time &lt;https://www.w3.org/2006/time#hasBeginning&gt; and &lt;https://www.w3.org/2006/time#hasEnd&gt;) to which a Version resource  is stable and considered as the official one.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#Version"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#TerritoryVersion">
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
+    <rdfs:label xml:lang="en">TerritoryVersion</rdfs:label>
+    <rdfs:comment xml:lang="en">The TerritoryVersion concept describes a unique representation of a Territory at a specified period of time. As the boundaries of a territory may vary (e.g., fusion with another territory), it results succesives versions of it. A territory may have as many versions as it underwent modifications. For instance, the European Union of 27 and the European Union of 28 member states are two versions of the European Union territory.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasSubUnit">
+    <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#hasSubRegion"/>
+    <rdfs:label xml:lang="en">hasSubUnit</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
+    <rdfs:comment xml:lang="en">Indicates a UnitVersion that is contained (spatially or not, as, for instance, an administrative hierarchy may be based on other criteria than spatial criteria) in the described UnitVersion.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasAcronym">
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+    <rdfs:label xml:lang="en">hasAcronym</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment xml:lang="en">Indicates an Acronym of a TSNComponent (e.g., EU27 is the prefered acronym used to designate the European Union made of 27 members).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#TSNFeature">
+    <rdfs:comment xml:lang="en">The TSNFeature concept is the super class of features of a TSN (i.e., a geographic resource). The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geo:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)</rdfs:comment>
+    <rdfs:label xml:lang="en">TSNFeature</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#versionRights">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">versionRights</rdfs:label>
+    <rdfs:comment xml:lang="en">Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/rights"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasDescription">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+    <rdfs:label xml:lang="en">hasDescription</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">Indicates a Description of a TSNComponent. It may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the TSNComponent.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#Nomenclature">
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+    <rdfs:comment xml:lang="en">The Nomenclature concept describes an abstract representation of the subdivisions of a territory into Levels and Territorial Units (i.e. also called 'Structure'). A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. </rdfs:comment>
+    <rdfs:label xml:lang="en">Nomenclature</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#belongsToLevel">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">belongsToLevel</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the LevelVersion the described UnitVersion resource belongs to.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
+    <owl:inverseOf rdf:resource="http://purl.org/net/tsn#hasUnit"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasLevel">
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
+    <rdfs:range rdf:resource="http://purl.org/net/tsn#LevelVersion"/>
+    <rdfs:comment xml:lang="en">Indicates a LevelVersion in the NomenclatureVersion hierarchy.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">hasLevel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#nomenclatureVersionSource">
+    <rdfs:label xml:lang="en">nomenclatureVersionSource</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/source"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">A related resource from which the described resource is derived. Example: European Commission - http://ec.europa.eu/eurostat/ramon/nuts/codelist_en.cfm?list=nuts</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#NomenclatureVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#LevelVersion">
+    <rdfs:label xml:lang="en">LevelVersion</rdfs:label>
+    <rdfs:comment xml:lang="en">The LevelVersion concept describes a unique representation of a Level, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the LevelVersion belongs to.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#Unit">
+    <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#Unit"/>
+    <rdfs:comment xml:lang="en">The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit.</rdfs:comment>
+    <rdfs:label xml:lang="en">Unit</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#TSNComponent">
+    <rdfs:label xml:lang="en">TSNComponent</rdfs:label>
+    <rdfs:comment>The TSNComponent concept is the super class of any Territorial Statistical Nomenclature components.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/tsn#hasGeometry">
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:comment xml:lang="en">Indicates a Geometry of a spatial resource (i.e., TSNFeature (TerritoryVersion, LevelVersion or UnitVersion) resource)</rdfs:comment>
+    <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
+    <owl:sameAs rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
   </rdf:Description>
 </rdf:RDF>
 

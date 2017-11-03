@@ -39,16 +39,16 @@
 
 #---------- TSN SUPER CLASSES ---------------------
 
-tsn:TSNComponent a rdfs:Class ;
+tsn:TSNComponent a owl:Class ;
  	  rdfs:label "TSNComponent"@en ;
     rdfs:comment "The TSNComponent concept is the super class of any Territorial Statistical Nomenclature components." .
 
-tsn:Version a rdfs:Class ;
+tsn:Version a owl:Class ;
  	 rdfs:label "Version"@en ;
    rdfs:comment "The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. "@en ;
    rdfs:subClassOf tsn:TSNComponent .
 
-tsn:TSNFeature a rdfs:Class ;
+tsn:TSNFeature a owl:Class ;
 	 rdfs:label "TSNFeature"@en ;
 	 rdfs:comment "The TSNFeature concept is the super class of features of a TSN (i.e., a geographic resource). The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geo:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
    rdfs:subClassOf geo:Feature ;
@@ -56,45 +56,45 @@ tsn:TSNFeature a rdfs:Class ;
 
 #---------- TSN CLASSES ---------------------
 
-tsn:Territory a rdfs:Class ;
+tsn:Territory a owl:Class ;
 	 rdfs:label "Territory"@en ;
 	 rdfs:comment "The Territory concept describes an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). For instance, the European Union is a territory, the Grenoble metropole is a territory, etc."@en ;
    rdfs:subClassOf tsn:TSNComponent .
 
-tsn:TerritoryVersion a rdfs:Class ;
+tsn:TerritoryVersion a owl:Class ;
 	 rdfs:label "TerritoryVersion"@en ;
 	 rdfs:comment "The TerritoryVersion concept describes a unique representation of a Territory at a specified period of time. As the boundaries of a territory may vary (e.g., fusion with another territory), it results succesives versions of it. A territory may have as many versions as it underwent modifications. For instance, the European Union of 27 and the European Union of 28 member states are two versions of the European Union territory."@en ;
 	 rdfs:subClassOf tsn:Version ;
 	 rdfs:subClassOf tsn:TSNFeature .
 
-tsn:Nomenclature a rdfs:Class ;
+tsn:Nomenclature a owl:Class ;
  	 rdfs:label "Nomenclature"@en ;
    rdfs:comment "The Nomenclature concept describes an abstract representation of the subdivisions of a territory into Levels and Territorial Units (i.e. also called 'Structure'). A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. "@en ;
    rdfs:subClassOf tsn:TSNComponent .
 
-tsn:NomenclatureVersion a rdfs:Class ;
+tsn:NomenclatureVersion a owl:Class ;
  	 rdfs:label "NomenclatureVersion"@en ;
    rdfs:comment "The NomenclatureVersion concept describes a unique representation of a Nomenclature, stable for a period of time. Stability ensures that statistical data refer to the same territorial units for a certain period of time (source http://ec.europa.eu/eurostat/web/nuts/history) (i.e., the reference period of the NomenclatureVersion)."@en ;
    rdfs:subClassOf tsn:Version .
 
-tsn:Level a rdfs:Class ;
+tsn:Level a owl:Class ;
    rdfs:label "Level"@en ;
    rdfs:comment "The Level concept describes a level of observation of the Territory defined within the Nomenclature. Several levels of observation may be defined (e.g., region or district levels)"@en ;
    rdfs:subClassOf tsn:TSNComponent .
 
-tsn:LevelVersion a rdfs:Class ;
+tsn:LevelVersion a owl:Class ;
 	 rdfs:label "LevelVersion"@en ;
 	 rdfs:comment "The LevelVersion concept describes a unique representation of a Level, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the LevelVersion belongs to."@en ;
 	 rdfs:subClassOf tsn:Version ;
 	 rdfs:subClassOf tsn:TSNFeature .
 
-tsn:Unit a rdfs:Class ;
+tsn:Unit a owl:Class ;
   rdfs:label "Unit"@en ;
   rdfs:comment "The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit."@en ;
   owl:sameAs ramon:Unit ;
   rdfs:subClassOf tsn:TSNComponent .
 
-tsn:UnitVersion a rdfs:Class ;
+tsn:UnitVersion a owl:Class ;
 	rdfs:label "UnitVersion"@en ;
 	rdfs:comment "The UnitVersion concept describes a unique representation of a Unit, stable for a period of time. This period of time is inherited from the reference period of the NomenclatureVersion the UnitVersion belongs to."@en ;
 	rdfs:subClassOf tsn:Version ;
