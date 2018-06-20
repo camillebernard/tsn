@@ -70,7 +70,7 @@ tsn:Territory a owl:Class ;
 tsn:TerritoryVersion a owl:Class ;
 	 rdfs:label "TerritoryVersion"@en ;
 	 rdfs:comment "The TerritoryVersion concept describes a unique representation of a Territory at a specified period of time. As the boundaries of a territory may vary (e.g., fusion with another territory), it results succesives versions of it. A territory may have as many versions as it underwent modifications. For instance, the European Union of 27 and the European Union of 28 member states are two versions of the European Union territory."@en ;
-	 rdfs:subClassOf tsn:Version ;
+	 rdfs:subClassOf tsn:UnitVersion ;
 	 rdfs:subClassOf tsn:TSNFeature .
 
 tsn:Nomenclature a owl:Class ;

@@ -312,7 +312,7 @@
         <rdfs:label xml:lang="en">TerritoryVersion</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
         <rdfs:comment xml:lang="en">The TerritoryVersion concept describes a unique representation of a Territory at a specified period of time. As the boundaries of a territory may vary (e.g., fusion with another territory), it results succesives versions of it. A territory may have as many versions as it underwent modifications. For instance, the European Union of 27 and the European Union of 28 member states are two versions of the European Union territory.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#UnitVersion"/>
     </owl:Class>
     <owl:DeprecatedProperty rdf:about="http://purl.org/net/tsn#hasLowerLevel">
         <rdfs:comment xml:lang="en"><![CDATA[Deprecated Property, <http://purl.org/net/tsn#hasSubFeature> property is now preferred.]]></rdfs:comment>
