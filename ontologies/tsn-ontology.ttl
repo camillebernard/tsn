@@ -52,7 +52,7 @@ tsn:Version a owl:Class ;
 
 tsn:TSNFeature a owl:Class ;
 	 rdfs:label "TSNFeature"@en ;
-	 rdfs:comment "The TSNFeature concept is the super class of features of a TSN (i.e., a geographic resource). The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geosparql:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
+	 rdfs:comment "The TSNFeature concept is the super class of features (i.e., a geographic resource) of a TSN. The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geosparql:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
    rdfs:subClassOf geosparql:Feature ;
    rdfs:subClassOf tsn:TSNComponent .
 
