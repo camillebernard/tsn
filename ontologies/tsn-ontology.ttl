@@ -27,7 +27,7 @@
 									[ a foaf:Person; foaf:name "Hy DAO"; foaf:homepage <https://unige.ch/gedt/membres/dao/> ];
 	dcterms:description "This ontology allows describing any Territorial Statistical Nomenclature (TSN) i.e., partition of the territory (electoral, administrative, statistical, etc.) used as a support to the collection and restitution of statistical data (e.g., describing a territory in terms of population, unemployement rate, transport access, etc.)."@en;
 	dcterms:issued "2017-01-31"^^xsd:date;
-	dcterms:modified "2018-03-29"^^xsd:date;
+	dcterms:modified "2019-05-24"^^xsd:date;
 	dcterms:publisher <http://steamer.imag.fr>;
 	dcterms:title "Territorial Statistical Nomenclature Ontology"@en;
 	vann:preferredNamespacePrefix "tsn";

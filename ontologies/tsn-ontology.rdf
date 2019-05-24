@@ -19,7 +19,7 @@
                 <foaf:name>Marlène VILLANOVA-OLIVER</foaf:name>
             </foaf:Person>
         </dcterms:creator>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-29</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-24</dcterms:modified>
         <vann:preferredNamespacePrefix>tsn</vann:preferredNamespacePrefix>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
