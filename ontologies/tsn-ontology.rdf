@@ -8,6 +8,7 @@
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:bfo="http://purl.obolibrary.org/obo/"
     >
     <owl:Ontology rdf:about="http://purl.org/net/tsn#">
         <dcterms:publisher rdf:resource="http://steamer.imag.fr"/>
@@ -84,6 +85,7 @@
     <owl:Class rdf:about="http://purl.org/net/tsn#Level">
         <rdfs:comment xml:lang="en">The Level concept describes a level of observation of the Territory defined within the Nomenclature. Several levels of observation may be defined (e.g., region or district levels)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:label xml:lang="en">Level</rdfs:label>
     </owl:Class>
     <rdf:Property rdf:about="http://purl.org/net/tsn#hasIdentifier">
@@ -175,6 +177,7 @@
     </rdf:Property>
     <owl:Class rdf:about="http://purl.org/net/tsn#Territory">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:comment xml:lang="en">The Territory concept describes an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). For instance, the European Union is a territory, the Grenoble metropole is a territory, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Territory</rdfs:label>
     </owl:Class>
@@ -204,6 +207,7 @@
     </owl:DeprecatedProperty>
     <owl:Class rdf:about="http://purl.org/net/tsn#Nomenclature">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:comment xml:lang="en">The Nomenclature concept describes an abstract representation of the subdivisions of a territory into Levels and Territorial Units (i.e. also called 'Structure'). A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. </rdfs:comment>
         <rdfs:label xml:lang="en">Nomenclature</rdfs:label>
     </owl:Class>
@@ -211,6 +215,7 @@
         <rdfs:comment xml:lang="en">The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit.</rdfs:comment>
         <rdfs:label xml:lang="en">Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#Unit"/>
     </owl:Class>
     <rdf:Property rdf:about="http://purl.org/net/tsn#nomenclatureVersionSource">
@@ -368,6 +373,7 @@
         <rdfs:label xml:lang="en">Version</rdfs:label>
         <rdfs:comment xml:lang="en">The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
     </owl:Class>
     <owl:Class rdf:about="http://purl.org/net/tsn#NomenclatureVersion">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>

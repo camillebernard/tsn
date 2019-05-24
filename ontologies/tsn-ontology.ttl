@@ -13,6 +13,7 @@
 @prefix time: <https://www.w3.org/2006/time#> .
 @prefix change: <http://linkedearth.org/change/ns#> .
 @prefix pav: <http://purl.org/pav/> .
+@prefix bfo: <http://purl.obolibrary.org/obo/> . #http://purl.obolibrary.org/obo/bfo.owl
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
@@ -48,6 +49,7 @@ tsn:TSNComponent a owl:Class ;
 tsn:Version a owl:Class ;
     rdfs:label "Version"@en ;
     rdfs:comment "The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. "@en ;
+   rdfs:subClassOf bfo:BFO_0000003. #BFO Class: occurrent
    rdfs:subClassOf tsn:TSNComponent .
 
 tsn:TSNFeature a owl:Class ;
@@ -65,6 +67,7 @@ geosparql:Feature dcterms:description "This class represents the top-level featu
 tsn:Territory a owl:Class ;
 	 rdfs:label "Territory"@en ;
 	 rdfs:comment "The Territory concept describes an abstract representation of a portion of geographic space that is claimed or occupied by a person or group of persons or by an institution (source http://www.oxfordbibliographies.com/view/document/obo-9780199874002/obo-9780199874002-0076.xml). For instance, the European Union is a territory, the Grenoble metropole is a territory, etc."@en ;
+   rdfs:subClassOf bfo:BFO_0000002 . #BFO Class: continuant
    rdfs:subClassOf tsn:TSNComponent .
 
 tsn:TerritoryVersion a owl:Class ;
@@ -74,8 +77,9 @@ tsn:TerritoryVersion a owl:Class ;
 	 rdfs:subClassOf tsn:TSNFeature .
 
 tsn:Nomenclature a owl:Class ;
- 	 rdfs:label "Nomenclature"@en ;
+   rdfs:label "Nomenclature"@en ;
    rdfs:comment "The Nomenclature concept describes an abstract representation of the subdivisions of a territory into Levels and Territorial Units (i.e. also called 'Structure'). A Nomenclature can be seen as a hierarchy of sets of Units with at least one Level. It is designed to answer administrative, electoral and especially statistical needs. "@en ;
+   rdfs:subClassOf bfo:BFO_0000002 . #BFO Class: continuant
    rdfs:subClassOf tsn:TSNComponent .
 
 tsn:NomenclatureVersion a owl:Class ;
@@ -86,6 +90,7 @@ tsn:NomenclatureVersion a owl:Class ;
 tsn:Level a owl:Class ;
    rdfs:label "Level"@en ;
    rdfs:comment "The Level concept describes a level of observation of the Territory defined within the Nomenclature. Several levels of observation may be defined (e.g., region or district levels)"@en ;
+   rdfs:subClassOf bfo:BFO_0000002 . #BFO Class: continuant
    rdfs:subClassOf tsn:TSNComponent .
 
 tsn:LevelVersion a owl:Class ;
@@ -98,6 +103,7 @@ tsn:Unit a owl:Class ;
   rdfs:label "Unit"@en ;
   rdfs:comment "The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit."@en ;
   owl:sameAs ramon:Unit ;
+  rdfs:subClassOf bfo:BFO_0000002 . #BFO Class: continuant
   rdfs:subClassOf tsn:TSNComponent .
 
 tsn:UnitVersion a owl:Class ;
