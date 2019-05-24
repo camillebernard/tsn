@@ -215,7 +215,13 @@
         <rdfs:comment xml:lang="en">The Unit concept describes a piece of geographic space that belongs to one Level of a Nomenclature, and may in turn contain sub-units (or not, if the unit belongs to the lowest level of the nomenclature). Statistical observation are made on Unit.</rdfs:comment>
         <rdfs:label xml:lang="en">Unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+                <dcterms:description xml:lang="en">A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity (SNAP) (Grenon and Smith definition). </dcterms:description>
+                <rdfs:label xml:lang="en">bfo:Continuant</rdfs:label>
+                <rdfs:comment>A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity (SNAP) (Grenon and Smith definition).</rdfs:comment>
+            </rdf:Description>
+        </rdfs:subClassOf>
         <owl:sameAs rdf:resource="http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#Unit"/>
     </owl:Class>
     <rdf:Property rdf:about="http://purl.org/net/tsn#nomenclatureVersionSource">
@@ -373,7 +379,13 @@
         <rdfs:label xml:lang="en">Version</rdfs:label>
         <rdfs:comment xml:lang="en">The Version concept describes one Version of a TSNComponent, valid for a period of time. A Version resource hold all the attributs of a TSNComponent that may vary, i.e., all attributs except those that hold the identity of the resource (i.e. Identifier of the TSNComponent). The Version concept is closed to the TimeSlice concept of ontologies of fluent. </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNComponent"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:subClassOf>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+                <dcterms:description xml:lang="en">An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region (SPAN) (Grenon and Smith definition). </dcterms:description>
+                <rdfs:label xml:lang="en">bfo:Occurrent</rdfs:label>
+                <rdfs:comment>An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region (SPAN) (Grenon and Smith definition).</rdfs:comment>
+            </rdf:Description>
+        </rdfs:subClassOf>
     </owl:Class>
     <owl:Class rdf:about="http://purl.org/net/tsn#NomenclatureVersion">
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#Version"/>

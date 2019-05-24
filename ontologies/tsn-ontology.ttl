@@ -52,6 +52,14 @@ tsn:Version a owl:Class ;
    rdfs:subClassOf bfo:BFO_0000003. #BFO Class: occurrent
    rdfs:subClassOf tsn:TSNComponent .
 
+bfo:BFO_0000003 dcterms:description "An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region (SPAN) (Grenon and Smith definition). "@en ;
+rdfs:label "bfo:Occurrent"@en ;
+rdfs:comment "An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region (SPAN) (Grenon and Smith definition).".
+
+bfo:BFO_0000002 dcterms:description "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity (SNAP) (Grenon and Smith definition).  "@en ;
+rdfs:label "bfo:Continuant"@en ;
+rdfs:comment "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity (SNAP) (Grenon and Smith definition). ".
+
 tsn:TSNFeature a owl:Class ;
 	 rdfs:label "TSNFeature"@en ;
 	 rdfs:comment "The TSNFeature concept is the super class of features (i.e., a geographic resource) of a TSN. The features of a TSN may be TerritoryVersion, LevelVersion and UnitVersion resources. The TSNFeature concept is a sub class of the geosparql:Feature concept of the OGC Geosparql ontology (please consult http://www.opengis.net/ont/geosparql#Feature for a definition of this concept)"@en ;
