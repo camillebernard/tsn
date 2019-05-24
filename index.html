@@ -54,7 +54,10 @@ a RIF and OWL documentation service</h2>
 
 <p><span class="parrot-element-ref parrot-class-ref">Classes (11):</span></p>
 <p>
-		<a href="#anchor338687317">Level</a>
+  		<a href="#anchor-continuant">bfo:Continuant</a>
+      , 		<a href="#anchor-occurrent">bfo:Occurrent</a>
+            , 		<a href="#anchor-geofeature">geosparql:Feature</a>
+	, 	<a href="#anchor338687317">Level</a>
 	, 		<a href="#anchor-1970301215">LevelVersion</a>
 	, 		<a href="#anchor1589853604">Nomenclature</a>
 	, 		<a href="#anchor666380210">NomenclatureVersion</a>
@@ -96,6 +99,16 @@ a RIF and OWL documentation service</h2>
 	, 		<a href="#anchor-938448803">referencePeriod</a>
 	, 		<a href="#anchor-26025792">versionRights</a>
 	</p>
+
+
+  <p><span class="parrot-element-ref parrot-ontology-ref">Ontologies Outgoing Links:</span></p>
+  <p>
+  		<a href="http://purl.org/pav/">PAV</a>
+    ,  <a href="http://www.opengis.net/ont/geosparql#">GeoSPARQL</a>
+    ,  <a href="http://purl.org/dc/terms/">DCterms</a>
+    ,  <a href="http://purl.obolibrary.org/obo/">BFO</a>
+    ,  <a href="http://www.w3.org/2006/time#">OWL-Time</a>
+  	</p>
 
 
 <p><span class="parrot-element-ref parrot-individual-ref">Individuals (4):</span></p>
@@ -243,7 +256,7 @@ a RIF and OWL documentation service</h2>
 
 
 				<dt>Last modified</dt>
-		<dd class="metadata-icon date">2018-03-29</dd>
+		<dd class="metadata-icon date">2019-05-24</dd>
 
 				<dt>Issued</dt>
 		<dd class="metadata-icon date">2017-01-31</dd>
@@ -307,7 +320,11 @@ a RIF and OWL documentation service</h2>
 	<div class="toc" id="classes" style="border-radius: 10px;">
 	<h2>Classes</h2>
 	<p>
-	  	    	<a href="#anchor338687317">Level</a>
+
+    <a href="#anchor-continuant">bfo:Continuant</a>
+    , 		<a href="#anchor-occurrent">bfo:Occurrent</a>
+      , 		<a href="#anchor-geofeature">geosparql:Feature</a>
+	  ,	    	<a href="#anchor338687317">Level</a>
 	, 	  	    	<a href="#anchor-1970301215">LevelVersion</a>
 	, 	  	    	<a href="#anchor1589853604">Nomenclature</a>
 	, 	  	    	<a href="#anchor666380210">NomenclatureVersion</a>
@@ -321,19 +338,160 @@ a RIF and OWL documentation service</h2>
 		  	</p>
 	</div>
 
-		  <div class="details classes" style="border-radius: 10px;">
 
 
 
 
 
 
+<!------------------->
+<div class="details classes" style="border-radius: 10px;">
+<div class="term"  about="http://purl.obolibrary.org/obo/BFO_0000002">
+
+
+<h3 id="anchor-continuant"> <a id="Continuant"></a><span class="parrot-element-title parrot-class-title">bfo:Continuant</span>
+
+    <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#Class">(OWL Class)</span>
 
 
 
 
+  <span class="menu">
+      <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>
+</h3>
 
 
+
+    <p class="description">A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity (SNAP) (Grenon and Smith definition). </p>
+
+<div>
+
+
+  <div class="ti" style="border-radius: 10px; display: block;">
+<h4>Definition</h4>
+    <p>The <strong>URI</strong> of this class is <span><a href="http://purl.obolibrary.org/obo/BFO_0000002"> http://purl.obolibrary.org/obo/BFO_0000002</a></span></p>
+  <hr>
+  </div>
+  <table>
+
+    <tbody><tr>
+  <td>This class is a super class of</td>
+  <td>
+      <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Level">            	<a href="#Level"> Level</a>
+    </span>
+      <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Nomenclature">            	<a href="#Nomenclature"> Nomenclature</a>
+    </span>
+      <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Territory">            	<a href="#Territory"> Territory</a>
+    </span>
+      <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Unit">            	<a href="#Unit"> Unit</a>
+    </span>
+      </td>
+  </tr>
+
+
+  </tbody></table>
+
+</div>
+</div>
+</div>
+<!------------------->
+
+<!------------------->
+<div class="details classes" style="border-radius: 10px;">
+<div class="term"  about="http://purl.obolibrary.org/obo/BFO_0000003">
+
+
+<h3 id="anchor-occurrent"> <a id="Occurrent"></a><span class="parrot-element-title parrot-class-title">bfo:Occurrent</span>
+
+    <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#Class">(OWL Class)</span>
+
+
+
+
+  <span class="menu">
+      <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>
+</h3>
+
+
+
+    <p class="description">An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region (SPAN) (Grenon and Smith definition). </p>
+
+<div>
+
+
+  <div class="ti" style="border-radius: 10px; display: block;">
+<h4>Definition</h4>
+    <p>The <strong>URI</strong> of this class is <span><a href="http://purl.obolibrary.org/obo/BFO_0000003"> http://purl.obolibrary.org/obo/BFO_0000003</a></span></p>
+  <hr>
+  </div>
+  <table>
+
+    <tbody><tr>
+  <td>This class is a super class of</td>
+  <td>
+    <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#Version">            	<a href="#Version"> Version</a>
+  </span>
+      </td>
+  </tr>
+
+
+  </tbody></table>
+
+</div>
+</div>
+</div>
+<!------------------->
+
+<!------------------->
+<div class="details classes" style="border-radius: 10px;">
+<div class="term"  about="http://www.opengis.net/ont/geosparql#Feature">
+
+
+<h3 id="anchor-geofeature"> <a id="Feature"></a><span class="parrot-element-title parrot-class-title">geosparql:Feature</span>
+
+    <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#Class">(OWL Class)</span>
+
+
+
+
+  <span class="menu">
+      <span class="ti-menu active" style="border-radius: 10px;">Definition</span> 	  	      </span>
+</h3>
+
+
+
+    <p class="description">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of all feature types (OGC definition). </p>
+
+<div>
+
+
+  <div class="ti" style="border-radius: 10px; display: block;">
+<h4>Definition</h4>
+    <p>The <strong>URI</strong> of this class is <span><a href="http://www.opengis.net/ont/geosparql#Feature"> http://www.opengis.net/ont/geosparql#Feature</a></span></p>
+  <hr>
+  </div>
+  <table>
+
+    <tbody><tr>
+  <td>This class is a super class of</td>
+  <td>
+      <span class="parrot-element-ref parrot-class-ref" rev="rdfs:subClassOf" href="http://purl.org/net/tsn#TSNFeature">            	<a href="#TSNFeature"> TSNFeature</a>
+    </span>
+
+      </td>
+  </tr>
+
+
+  </tbody></table>
+
+</div>
+</div>
+</div>
+<!------------------->
+
+
+
+<div class="details classes" style="border-radius: 10px;">
 	<div class="term" id="md5-813652423194dec3ccd78baf5c093135" about="http://purl.org/net/tsn#Level">
 
 
@@ -380,6 +538,8 @@ a RIF and OWL documentation service</h2>
 
   </div>
 </div>
+
+
   </div>
 		  <div class="details classes" style="border-radius: 10px;">
 
@@ -1534,7 +1694,7 @@ a RIF and OWL documentation service</h2>
     <div class="ti" style="border-radius: 10px; display: block;">
   <h4>Definition</h4>
 
-			<p>The <strong>URI</strong> of this property is <span><code>http://purl.org/dc/terms/identifier</code></span></p>
+			<p>The <strong>URI</strong> of this property is <span><a class="parrot-link" href="http://purl.org/dc/terms/identifier">http://purl.org/dc/terms/identifier</a></span></p>
 
 
         <table>
