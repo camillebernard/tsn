@@ -12,7 +12,6 @@
     >
     <owl:Ontology rdf:about="http://purl.org/net/tsn#">
         <dcterms:publisher rdf:resource="http://steamer.imag.fr"/>
-        <cc:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
         <dcterms:creator>
             <foaf:Person rdf:nodeID="ub4bL23C10">
                 <foaf:homepage rdf:resource="http://lig-membres.imag.fr/villanov/"/>
@@ -22,7 +21,7 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-24</dcterms:modified>
         <vann:preferredNamespacePrefix>tsn</vann:preferredNamespacePrefix>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
-        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/2.0/"/>
         <vann:preferredNamespaceUri rdf:resource="http://purl.org/net/tsn#"/>
         <dcterms:creator>
             <foaf:Person rdf:nodeID="ub4bL24C10">
@@ -399,4 +398,3 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/net/tsn#TSNFeature"/>
     </owl:Class>
 </rdf:RDF>
-

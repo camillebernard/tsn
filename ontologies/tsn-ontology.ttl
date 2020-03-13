@@ -20,7 +20,7 @@
 # Ontology TSN
 #################################################################
 <http://purl.org/net/tsn#> a owl:Ontology ;
-	cc:license <http://creativecommons.org/licenses/by/4.0/>;
+	cc:license <https://creativecommons.org/licenses/by-nc-sa/2.0/>;
 	dcterms:creator [ a foaf:Person; foaf:name "Camille BERNARD"; foaf:homepage <http://lig-membres.imag.fr/bernardc/>],
 									[ a foaf:Person; foaf:name "Marlène VILLANOVA-OLIVER"; foaf:homepage <http://lig-membres.imag.fr/villanov/> ],
 									[ a foaf:Person; foaf:name "Jérôme GENSEL"; foaf:homepage <http://lig-membres.imag.fr/gensel/> ],
@@ -32,7 +32,6 @@
 	dcterms:title "Territorial Statistical Nomenclature Ontology"@en;
 	vann:preferredNamespacePrefix "tsn";
 	vann:preferredNamespaceUri <http://purl.org/net/tsn#>;
-	cc:license <http://www.data.gouv.fr/Licence-Ouverte-Open-Licence>;
 	owl:versionInfo "1.1"^^xsd:decimal;
 	rdfs:comment "This 1.1 version of the ontology redefines the predicates that express the territorial hierarchies (has division, has member , etc.) ".
 
